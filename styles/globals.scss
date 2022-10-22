@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
+@import "./styles/variables.scss";
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $background-color;
+  color: $color-whey;
+  font-family: silkscreen;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
