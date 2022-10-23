@@ -1,5 +1,18 @@
-@import "./styles/variables.scss";
+@import "./styles/general.scss";
+
+.blind {
+  width: 99vw;
+  height: 99vh;
+  background-image: url("../../public/blindForeground.png");
+  background-size: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
 
 .mainCont {
+  overflow: hidden;
+  height: 100vh;
   //   background-color: ;
 }

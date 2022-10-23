@@ -1,0 +1,11 @@
+@import "./styles/general.scss";
+
+.container {
+  display: flex;
+  padding: $spacer-general;
+}
+
+.aside {
+  margin-right: 50px;
+  width: 30%;
+}

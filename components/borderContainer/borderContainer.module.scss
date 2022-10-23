@@ -1,0 +1,30 @@
+@import "./styles/general.scss";
+
+.content {
+  padding: 0 40px;
+}
+
+.topBorder,
+.botBorder {
+  display: flex;
+  justify-content: space-between;
+  img {
+    width: 40px;
+    height: auto;
+  }
+}
+
+.topBorder {
+  img:first-child {
+    transform: rotate(270deg);
+  }
+}
+
+.botBorder {
+  img:first-child {
+    transform: rotate(180deg);
+  }
+  img:last-child {
+    transform: rotate(90deg);
+  }
+}
