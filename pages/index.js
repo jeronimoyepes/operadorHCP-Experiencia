@@ -1,5 +1,4 @@
 import { NumberedBox } from "components/numberedBox/NumberedBox";
-import { useEffect } from "react";
 import { Layout } from "../components/layout/Layout";
 import styles from "./index.module.scss";
 import BorderContainer from "components/borderContainer/BorderContainer";

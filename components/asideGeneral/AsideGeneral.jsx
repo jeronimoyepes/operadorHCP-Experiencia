@@ -1,17 +1,17 @@
 import styles from "./asideGeneral.module.scss";
-export default function AsideGeneral(props) {
-  const { h1, h2, description, date } = props;
+export default function AsideGeneral({ props }) {
+  const { h1, h2, pageDescription, date } = props;
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.title}>
         <h1>{h1}</h1>
         <h2>{h2}</h2>
       </div>
-      <div>
+      <div className={styles.pageDescription}>
         <div>{">>"}</div>
-        <p>{description}</p>
+        <p>{pageDescription}</p>
       </div>
-      <div>
+      <div className={styles.date}>
         <p>{date}</p>
       </div>
     </div>
