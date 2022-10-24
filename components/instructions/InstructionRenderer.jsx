@@ -47,7 +47,7 @@ export default function InstructionRenderer({ children, pages, pageCounter }) {
         <div className={styles.children}>{children}</div>
 
         <div className={styles.counter}>
-          {pageCounter.map((page, index) => {
+          {pageCounter?.map((page, index) => {
             return page.fill ? (
               <img key={index} src="/square-fill.svg" alt="↑" />
             ) : (
