@@ -8,11 +8,11 @@ import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
 
 const page2 = () => {
-  const pages = { prev: 1, next: 3 };
+  const pages = { prev: 2, next: 4 };
   const pageCounter = [
     { fill: false },
-    { fill: true },
     { fill: false },
+    { fill: true },
     { fill: false },
   ];
   return (
@@ -20,10 +20,8 @@ const page2 = () => {
       <InstructionRenderer pages={pages} pageCounter={pageCounter}>
         <div className={styles.container}>
           <p>
-            Las estaciones emiten reportes constantemente y de manera
-            simultanea.
+            Para observar los reportes conéctate a cada estación desde el tablero de control.
           </p>
-          <p>¡No te pierdas de nada!</p>
           <img src="/stationsList.svg" alt="" />
         </div>
       </InstructionRenderer>
