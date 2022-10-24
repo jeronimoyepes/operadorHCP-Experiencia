@@ -1,15 +1,53 @@
-import styles from "./pagerenderer.module.scss";
+import { useEffect, useState } from "react";
 
-export default function PageRenderer({ children, pagesAmount }) {
+import Router from "next/router";
+
+
+import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
+import { Layout } from "@/components/layout/Layout";
+
+import styles from "./pagerenderer.module.scss";
+import ControlsPannel from "../controlsPannel/ControlsPannel";
+
+export default function PageRenderer({children, pages}) {
+
+  const asideGeneralData = {
+    h1: "IC-HCP",
+    h2: "Iniciativa científica",
+    pageDescription: "Lista de actividades del operador",
+    date: "04/10/22",
+  };
+
+  const controlsData = [
+    {
+      name:"siguiente",
+      image: "/button-1.svg"
+    }
+  ]
+
+
+  useEffect(() => {
+    function handleKeyDown(e) {
+      const key = e.key;
+      if (key == "ArrowRight") {
+        Router.push(`./instructions/page${pages.next}`);
+      }
+      if (key == "ArrowLeft") {
+        Router.push(`./instructions/page${pages.prev}`);
+      }
+    }
+    window.addEventListener("keyup", handleKeyDown);
+  }, []);
+  
   return (
-    <div className={styles.container}>
-      <div>{children}</div>
-      <div className={styles.pageCounter}>
-        {pagesAmount.map((page) => {
-          console.log(page);
-          return <p key={page}>a</p>;
-        })}
+    <Layout title="Actividades">
+      <div className={styles.container}>
+        <AsideGeneral props={asideGeneralData}></AsideGeneral>
+        <div className={styles.pages}>
+            {children}
+        </div>
+        <ControlsPannel controls={controlsData}/>
       </div>
-    </div>
+    </Layout>
   );
-}  
+}

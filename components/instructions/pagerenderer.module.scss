@@ -1,2 +1,11 @@
+@import "./styles/general.scss";
+
+
 .container {
+    display: flex;
+}
+
+.pages {
+    width: 60%;
+    border: 1px solid $color-whey;
 }
