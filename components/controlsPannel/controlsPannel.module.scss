@@ -1,0 +1,30 @@
+@import "./styles/general.scss";
+
+.container {
+  text-align: center;
+  max-width: 200px;
+  padding-top: 30px;
+  
+  > div {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .control {
+    padding: 20px;
+    border-top: $border-general;
+    border-bottom: $border-general;
+    @include textGlow1($color-blue-opacity);
+
+    img {
+      max-width: 130px;
+    }
+    p {
+      color: $color-blue;
+    }
+    &:first-child {
+        margin-bottom: 30px;
+    }
+  }
+}

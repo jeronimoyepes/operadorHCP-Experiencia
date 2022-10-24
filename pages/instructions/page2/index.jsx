@@ -7,15 +7,14 @@ import styles from "../instructions.module.scss";
 import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
 
-const page1 = () => {
+const page2 = () => {
   const pages = { prev: 1, next: 2 };
   const pageCounter = [
+    { fill: false },
     { fill: true },
     { fill: false },
     { fill: false },
-    { fill: false },
   ];
-  console.log(pageCounter);
   return (
     <Layout>
       <InstructionRenderer pages={pages} pageCounter={pageCounter}>
@@ -32,4 +31,4 @@ const page1 = () => {
   );
 };
 
-export default page1;
+export default page2;

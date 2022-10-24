@@ -1,13 +1,19 @@
 @import "./styles/general.scss";
 
 .container {
-  max-width: 300px;
+  width: 20%;
+  padding-left: 30px;
+  @include textGlow1($color-whey-opacity);
+
   > div {
     padding: 10vh 0;
-    border-bottom: 1px solid $color-whey;
+    border-bottom: $border-general;
   }
   > div:last-child {
     border-bottom: none;
+  }
+  > div:first-child {
+    padding-top: 8vh;
   }
 }
 

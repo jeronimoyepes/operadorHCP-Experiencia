@@ -2,17 +2,19 @@ import styles from "./controlsPannel.module.scss";
 
 export default function ControlsPannel({ controls }) {
   return (
-    <div>
+    <div className={styles.container}>
       <p>controles</p>
       <div>
-        {controls.map((control, index) => {
-          return (
-            <div key={index}>
-              <img src={control.image} alt="" />
-              <div>{control.name}</div>
-            </div>
-          );
-        })}
+        <div>
+          {controls.map((control, index) => {
+            return (
+              <div key={index} className={styles.control}>
+                <img src={control.image} alt="" />
+                <p>{control.name}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

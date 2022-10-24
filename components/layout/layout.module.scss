@@ -6,6 +6,7 @@
   background-image: url("../../public/blindForeground.png");
   background-size: 5px;
   position: absolute;
+  z-index: 400;
   top: 0;
   left: 0;
   overflow: hidden;
@@ -14,5 +15,4 @@
 .mainCont {
   overflow: hidden;
   height: 100vh;
-  //   background-color: ;
 }

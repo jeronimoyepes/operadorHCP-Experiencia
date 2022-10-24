@@ -2,9 +2,11 @@ $background-color: #110b18;
 $color-whey: #f9e9e1;
 $color-orange: #ed7e4f;
 $color-blue: #49bbce;
-$border-general: 1px solid $color-whey;
-$spacing-general: 50px;
 
 $color-whey-opacity: rgba(249, 233, 225, 0.5);
-$color-orange-opacity: rgba(237, 126, 79, 1);
-$color-blue-opacity: rgba(73, 186, 206, 0.5);
+$color-orange-opacity: rgba(237, 126, 79, 0.5);
+$color-blue-opacity: rgba(73, 186, 206, 0.9);
+
+$border-general: 1px solid rgba(249, 233, 225, 0.2);
+$spacing-general: 50px;
+
