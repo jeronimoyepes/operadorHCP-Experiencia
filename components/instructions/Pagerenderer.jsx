@@ -12,4 +12,4 @@ export default function PageRenderer({ children, pagesAmount }) {
       </div>
     </div>
   );
-}
+}  
