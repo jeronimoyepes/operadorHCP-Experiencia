@@ -15,16 +15,32 @@ const page2 = () => {
     { fill: false },
     { fill: false },
   ];
+  const controlsData = [
+    {
+      name: "siguiente >",
+      image: "/button-1.svg",
+    },
+    {
+      name: "< anterior",
+      image: "/button-2.svg",
+    },
+  ];
   return (
-    <Layout>
-      <InstructionRenderer pages={pages} pageCounter={pageCounter}>
+    <Layout title={"Instructions"}>
+      <InstructionRenderer
+        pages={pages}
+        pageCounter={pageCounter}
+        controlsData={controlsData}
+      >
         <div className={styles.container}>
           <p>
             Las estaciones emiten reportes constantemente y de manera
             simultanea.
           </p>
           <p>¡No te pierdas de nada!</p>
-          <img src="/stationsList.svg" alt="" />
+          <div>
+            <img src="/stationsSignals.gif" alt="" />
+          </div>
         </div>
       </InstructionRenderer>
     </Layout>

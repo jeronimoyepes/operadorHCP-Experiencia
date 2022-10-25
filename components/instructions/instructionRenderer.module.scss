@@ -10,7 +10,7 @@
   margin: 30px;
   padding: 30px;
   width: 60%;
-  height: 90vh;
+  height: 95vh;
   border: $border-general;
   border-top-left-radius: 15px;
   @include textGlow1($color-whey-opacity);
@@ -19,6 +19,12 @@
       width: 50px;
     }
   }
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  height: 85%;
 }
 
 .counter {

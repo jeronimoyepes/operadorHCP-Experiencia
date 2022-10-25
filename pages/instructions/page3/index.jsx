@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 // Modules
-
 import styles from "../instructions.module.scss";
 
 import InstructionRenderer from "@/components/instructions/InstructionRenderer";
@@ -15,14 +14,31 @@ const page2 = () => {
     { fill: true },
     { fill: false },
   ];
+  const controlsData = [
+    {
+      name: "siguiente >",
+      image: "/button-1.svg",
+    },
+    {
+      name: "< anterior",
+      image: "/button-2.svg",
+    },
+  ];
   return (
-    <Layout>
-      <InstructionRenderer pages={pages} pageCounter={pageCounter}>
+    <Layout title={"Instructions"}>
+      <InstructionRenderer
+        pages={pages}
+        pageCounter={pageCounter}
+        controlsData={controlsData}
+      >
         <div className={styles.container}>
           <p>
-            Para observar los reportes conéctate a cada estación desde el tablero de control.
+            Para observar los reportes conéctate a cada estación desde el
+            tablero de control.
           </p>
-          <img src="/stationsList.svg" alt="" />
+          <div>
+            <img src="/stationsOnConsole.png" alt="" />
+          </div>
         </div>
       </InstructionRenderer>
     </Layout>

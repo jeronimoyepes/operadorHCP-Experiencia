@@ -7,11 +7,15 @@
     margin-bottom: 30px;
   }
   p {
-    max-width: 500px;
+    max-width: 600px;
     font-size: 1.3em;
+    margin-bottom: 20px;
   }
-  > img {
+  > div {
     margin-top: 50px;
-    max-width: 350px;
+    text-align: center;
+    img {
+      max-height: 55vh;
+    }
   }
 }

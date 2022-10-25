@@ -2,10 +2,20 @@
 
 .container {
   display: flex;
+  align-items: center;
   padding: $spacing-general;
 }
 
 .aside {
   margin-right: 50px;
-  width: 30%;
+  width: 33%;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
 }

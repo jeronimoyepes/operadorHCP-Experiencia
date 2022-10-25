@@ -8,24 +8,35 @@ import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
 
 const page1 = () => {
-  const pages = { prev: 1, next: 2 };
+  const pages = { prev: 0, next: 2 };
   const pageCounter = [
     { fill: true },
     { fill: false },
     { fill: false },
     { fill: false },
   ];
-  console.log(pageCounter);
+  const controlsData = [
+    {
+      name: "siguiente >",
+      image: "/button-1.svg",
+    },
+    {
+      name: "< anterior",
+      image: "/button-2.svg",
+    },
+  ];
   return (
-    <Layout>
-      <InstructionRenderer pages={pages} pageCounter={pageCounter}>
+    <Layout title={"Instructions"}>
+      <InstructionRenderer pages={pages} pageCounter={pageCounter} controlsData={controlsData}>
         <div className={styles.container}>
           <h3>Bienvenido estimado operador.</h3>
           <p>
             el día de hoy estarás a cargo de supervisar las operaciones de
             investigacion científica de las siguientes bases de observación:
           </p>
-          <img src="/stationsList.svg" alt="" />
+          <div>
+            <img src="/stationsList.png" alt="" />
+          </div>
         </div>
       </InstructionRenderer>
     </Layout>

@@ -19,6 +19,7 @@ const fetchUser = async () => {
   return user;
 };
 
+
 export default function Home() {
   const numberedBoxData = [
     {

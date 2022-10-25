@@ -6,7 +6,7 @@ export default function ControlsPannel({ controls }) {
       <p>controles</p>
       <div>
         <div>
-          {controls.map((control, index) => {
+          {controls?.map((control, index) => {
             return (
               <div key={index} className={styles.control}>
                 <img src={control.image} alt="" />

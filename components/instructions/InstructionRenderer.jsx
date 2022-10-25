@@ -8,7 +8,7 @@ import { Layout } from "@/components/layout/Layout";
 import styles from "./instructionRenderer.module.scss";
 import ControlsPannel from "../controlsPannel/ControlsPannel";
 
-export default function InstructionRenderer({ children, pages, pageCounter }) {
+export default function InstructionRenderer({ children, pages, pageCounter, controlsData }) {
   const asideGeneralData = {
     h1: "IC-HCP",
     h2: "Iniciativa científica",
@@ -16,26 +16,26 @@ export default function InstructionRenderer({ children, pages, pageCounter }) {
     date: "04/10/22",
   };
 
-  const controlsData = [
-    {
-      name: "siguiente >",
-      image: "/button-1.svg",
-    },
-    {
-      name: "< anterior",
-      image: "/button-2.svg",
-    },
-  ];
-
   useEffect(() => {
     function handleKeyDown(e) {
       const key = e.key;
       if (key == "ArrowRight") {
-        Router.push(`./page${pages.next}`);
+        // Capturar si es la última pantalla de las instrucciones
+        if (pages.next == 6) {
+          window.removeEventListener("keyup", handleKeyDown);
+          return Router.push("/");
+        } else {
+          Router.push(`./page${pages.next}`);
+        }
       }
       if (key == "ArrowLeft") {
-        Router.push(`./page${pages.prev}`);
+        if (pages.prev == 0) {
+          return null;
+        } else {
+          Router.push(`./page${pages.prev}`);
+        }
       }
+      window.removeEventListener("keyup", handleKeyDown);
     }
     window.addEventListener("keyup", handleKeyDown);
   }, []);

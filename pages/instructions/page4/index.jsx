@@ -15,14 +15,31 @@ const page2 = () => {
     { fill: false },
     { fill: true },
   ];
+  const controlsData = [
+    {
+      name: "siguiente >",
+      image: "/button-1.svg",
+    },
+    {
+      name: "< anterior",
+      image: "/button-2.svg",
+    },
+  ];
   return (
-    <Layout>
-      <InstructionRenderer pages={pages} pageCounter={pageCounter}>
+    <Layout title={"Instructions"}>
+      <InstructionRenderer
+        pages={pages}
+        pageCounter={pageCounter}
+        controlsData={controlsData}
+      >
         <div className={styles.container}>
           <p>
-            Los resportes enviados pueden ser de múltiples tipos y cada uno te pedirá usar diferentes controles del tablero.
+            Los resportes enviados pueden ser de múltiples tipos y cada uno te
+            pedirá usar diferentes controles del tablero.
           </p>
-          <img src="/stationsList.svg" alt="" />
+          <div>
+            <img src="/reportTypeControl.gif" alt="" />
+          </div>
         </div>
       </InstructionRenderer>
     </Layout>
