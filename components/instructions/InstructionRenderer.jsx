@@ -23,7 +23,7 @@ export default function InstructionRenderer({ children, pages, pageCounter, cont
         // Capturar si es la última pantalla de las instrucciones
         if (pages.next == 6) {
           window.removeEventListener("keyup", handleKeyDown);
-          return Router.push("/");
+          return Router.push("/sateliteConection");
         } else {
           Router.push(`./page${pages.next}`);
         }
