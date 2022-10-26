@@ -11,14 +11,35 @@ const page2 = () => {
   const pages = { prev: 4, next: 6 };
   const controlsData = [
     {
-      name: "siguiente >",
+      name: "¡comenzar!",
       image: "/button-1.svg",
     },
     {
-      name: "< anterior",
+      name: "agradecer a la HCP",
       image: "/button-2.svg",
     },
+    {
+      name: "renunciar",
+      image: "/button-3.svg",
+    },
   ];
+  useEffect(() => {
+    function handleKeyDown(e) {
+      const key = e.key;
+      if (key == "z") {
+        console.log("Comenzar")
+        document.removeEventListener("keyup", handleKeyDown);
+        return location.replace("/sateliteConection")
+      }
+      if (key == "x") {
+        console.log("Agradecer a la HCP")
+      }
+      if (key == "c") {
+        console.log("Renunciar")
+      }
+    }
+    document.addEventListener("keyup", handleKeyDown);
+  }, []);
   return (
     <Layout title={"Instructions"}>
       <InstructionRenderer

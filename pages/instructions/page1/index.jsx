@@ -19,11 +19,7 @@ const page1 = () => {
     {
       name: "siguiente >",
       image: "/button-1.svg",
-    },
-    {
-      name: "< anterior",
-      image: "/button-2.svg",
-    },
+    }
   ];
   return (
     <Layout title={"Instructions"}>

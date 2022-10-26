@@ -1,25 +1,37 @@
 import { useEffect } from "react";
+import Router from "next/router";
+
+import styles from "./sateliteConection.module.scss";
+
+import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
+import BorderContainer from "@/components/borderContainer/BorderContainer";
+import { Layout } from "@/components/layout/Layout";
 
 export default function sateliteConection() {
-  useEffect(() => {
-    function handleKeyDown(e) {
-      const key = e.key;
-      if (key == "z") {
-        alert("Z")
-      }
-      if (key == "x") {
-        alert("X")
-      }
-      if (key == "c") {
-        alert("C")
-      }
-    }
-    window.addEventListener("keyup", handleKeyDown);
-  }, []);
+  const asideGeneralData = {
+    // h1: "",
+    // h2: "",
+    pageDescription: "Esperando sincronización con satélite",
+    // date: "04/10/22",
+    img: "randomCode.png"
+  };
 
+  useEffect(() => {
+    setInterval(() => {
+      Router.push("/mainExperience")
+    }, 8000);
+  }, [])
+  
   return (
-    <div>
-      <img src="/satelite.gif" alt="" />
-    </div>
+    <Layout title={"Conectando..."}>
+      <div className={styles.container}>
+        <AsideGeneral props={asideGeneralData} />
+        <div className={styles.satImage}>
+          <BorderContainer>
+            <img src="/satelite.gif" alt="" />
+          </BorderContainer>
+        </div>
+      </div>
+    </Layout>
   );
 }

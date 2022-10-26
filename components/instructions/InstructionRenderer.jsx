@@ -19,7 +19,7 @@ export default function InstructionRenderer({ children, pages, pageCounter, cont
   useEffect(() => {
     function handleKeyDown(e) {
       const key = e.key;
-      if (key == "ArrowRight") {
+      if (key == "z") {
         // Capturar si es la última pantalla de las instrucciones
         if (pages.next == 6) {
           window.removeEventListener("keyup", handleKeyDown);
@@ -28,7 +28,7 @@ export default function InstructionRenderer({ children, pages, pageCounter, cont
           Router.push(`./page${pages.next}`);
         }
       }
-      if (key == "ArrowLeft") {
+      if (key == "c") {
         if (pages.prev == 0) {
           return null;
         } else {

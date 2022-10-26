@@ -22,7 +22,7 @@ const page2 = () => {
     },
     {
       name: "< anterior",
-      image: "/button-2.svg",
+      image: "/button-3.svg",
     },
   ];
   return (
