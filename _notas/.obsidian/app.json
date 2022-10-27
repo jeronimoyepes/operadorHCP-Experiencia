@@ -1,0 +1,14 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "alwaysUpdateLinks": true,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "en-US",
+    "es"
+  ],
+  "attachmentFolderPath": "./attachments",
+  "promptDelete": false,
+  "showUnsupportedFiles": true,
+  "tabSize": 4
+}

@@ -5,7 +5,7 @@
   width: 100%;
   align-items: center;
   border: $border-general;
-  height: 300px;
+  
   padding: 10px;
   margin-bottom: $spacing-general;
   overflow: hidden;
@@ -35,6 +35,8 @@
       font-family: Bungee;
       font-size: 3em;
       max-width: 700px;
+      line-height: 1.2em;
+      margin-bottom: 20px;
       @include textGlow2($color-whey-opacity);
       img {
         display: block;

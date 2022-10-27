@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Router from "next/router";
 
 import styles from "./sateliteConection.module.scss";
 
@@ -18,7 +17,7 @@ export default function sateliteConection() {
 
   useEffect(() => {
     setInterval(() => {
-      Router.push("/mainExperience")
+      window.location.assign("/mainExperience")
     }, 8000);
   }, [])
   

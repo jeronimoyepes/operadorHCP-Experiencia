@@ -2,7 +2,7 @@ import styles from "./borderContainer.module.scss";
 
 export default function BorderContainer({ children }) {
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.topBorder}>
         <img src="corner.svg" alt="" />
         <img src="corner.svg" alt="" />

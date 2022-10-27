@@ -8,7 +8,12 @@ import { Layout } from "@/components/layout/Layout";
 import styles from "./instructionRenderer.module.scss";
 import ControlsPannel from "../controlsPannel/ControlsPannel";
 
-export default function InstructionRenderer({ children, pages, pageCounter, controlsData }) {
+export default function InstructionRenderer({
+  children,
+  pages,
+  pageCounter,
+  controlsData,
+}) {
   const asideGeneralData = {
     h1: "IC-HCP",
     h2: "Iniciativa científica",
@@ -17,13 +22,13 @@ export default function InstructionRenderer({ children, pages, pageCounter, cont
   };
 
   useEffect(() => {
-    function handleKeyDown(e) {
+    function handleKeyInstructions(e) {
       const key = e.key;
       if (key == "z") {
         // Capturar si es la última pantalla de las instrucciones
         if (pages.next == 6) {
-          window.removeEventListener("keyup", handleKeyDown);
-          return Router.push("/sateliteConection");
+          window.removeEventListener("keyup", handleKeyInstructions);
+          return window.location.assign("/sateliteConection");
         } else {
           Router.push(`./page${pages.next}`);
         }
@@ -32,12 +37,12 @@ export default function InstructionRenderer({ children, pages, pageCounter, cont
         if (pages.prev == 0) {
           return null;
         } else {
+          window.removeEventListener("keyup", handleKeyInstructions);
           Router.push(`./page${pages.prev}`);
         }
       }
-      window.removeEventListener("keyup", handleKeyDown);
     }
-    window.addEventListener("keyup", handleKeyDown);
+    window.addEventListener("keyup", handleKeyInstructions);
   }, []);
 
   return (

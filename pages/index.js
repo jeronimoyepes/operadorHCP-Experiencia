@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { NumberedBox } from "components/numberedBox/NumberedBox";
 import { Layout } from "../components/layout/Layout";
 import styles from "./index.module.scss";
@@ -19,7 +21,6 @@ const fetchUser = async () => {
   return user;
 };
 
-
 export default function Home() {
   const numberedBoxData = [
     {
@@ -31,6 +32,16 @@ export default function Home() {
       text: "Enciende la consola",
     },
   ];
+  useEffect(() => {
+    function handleKeyDown(e) {
+      const key = e.key;
+      if (key == "a") {
+        document.removeEventListener("keyup", handleKeyDown);
+        return location.replace("/instructions/page1");
+      }
+    }
+    document.addEventListener("keyup", handleKeyDown);
+  }, []);
   return (
     <Layout title={"Inicio"}>
       <div className={styles.container}>

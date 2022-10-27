@@ -1,0 +1,5 @@
+- Texto
+- Opciones de respuesta (Puede ser un módulo)
+	- Función
+	- Nombre
+	- Tecla

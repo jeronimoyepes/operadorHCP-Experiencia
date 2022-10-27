@@ -10,8 +10,8 @@ export const NumberedBox = ({ number, text }) => {
         <div className={styles.container_text}>
           <p>
             {text}
-            <img src="/warn-lines.svg" alt="" />
           </p>
+          <img src="/warn-lines.svg" alt="" />
         </div>
       </div>
     </>

@@ -24,11 +24,10 @@ const page2 = () => {
     },
   ];
   useEffect(() => {
-    function handleKeyDown(e) {
+    function handleKeyEndInstructions(e) {
       const key = e.key;
       if (key == "z") {
-        console.log("Comenzar")
-        document.removeEventListener("keyup", handleKeyDown);
+        document.removeEventListener("keyup", handleKeyEndInstructions);
         return location.replace("/sateliteConection")
       }
       if (key == "x") {
@@ -38,7 +37,7 @@ const page2 = () => {
         console.log("Renunciar")
       }
     }
-    document.addEventListener("keyup", handleKeyDown);
+    document.addEventListener("keyup", handleKeyEndInstructions);
   }, []);
   return (
     <Layout title={"Instructions"}>

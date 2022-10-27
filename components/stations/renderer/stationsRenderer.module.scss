@@ -1,1 +1,9 @@
 @import "./styles/general.scss";
+
+.container {
+    display: flex;
+}
+
+.aside {
+    width: 30%;
+}

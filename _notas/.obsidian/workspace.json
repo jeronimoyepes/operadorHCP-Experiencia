@@ -1,0 +1,114 @@
+{
+  "main": {
+    "id": "569ec716ae6f89f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "3dafbfeb10eb187c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7f770786e482229",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bases/Interacciones/Ártico/5. Registros de temperaturas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e75151b0be08b46c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a6c1d4d22e45fcc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee6080abd80a74c0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "10930e07bb3ee9a9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 264.5
+  },
+  "right": {
+    "id": "63f8fd3c99e13fd9",
+    "type": "split",
+    "children": [
+      {
+        "id": "44dda0c5520ed241",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35a6131c724f98b0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Bases/Interacciones/Ártico/5. Registros de temperaturas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "f7f770786e482229",
+  "lastOpenFiles": [
+    "Bases/Interacciones/Ártico/4. Problemas con la calefacción.md",
+    "Bases/Interacciones/Ártico/3. Fósiles descubiertos por el descongelamiento (Virus prehistórico).md",
+    "Bases/Interacciones/Ártico/2. Botes de las primeras expediciones anclados.md",
+    "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
+    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
+    "Bases/Interacciones/Ártico/5. Registros de temperaturas.md",
+    "El operador.md",
+    "Estaciones de observación científica.md",
+    "Interfaz de operaciones.md",
+    "Informe de las acciones.md"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "main": {
+    "id": "569ec716ae6f89f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f7f770786e482229",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "34f830ca990485a1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Bases/1. Base Ártico.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e75151b0be08b46c",
+    "type": "split",
+    "children": [
+      {
+        "id": "a6c1d4d22e45fcc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ee6080abd80a74c0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "10930e07bb3ee9a9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "\"1. Base submarina\"",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 285.5
+  },
+  "right": {
+    "id": "63f8fd3c99e13fd9",
+    "type": "split",
+    "children": [
+      {
+        "id": "44dda0c5520ed241",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "35a6131c724f98b0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ee6080abd80a74c0",
+  "lastOpenFiles": [
+    "Bases/1. Base Ártico.md",
+    "Bases/Interacciones/Ártico/attachments/Pasted image 20221012222939.png",
+    "Bases/Interacciones/Ártico/attachments/Pasted image 20221013223036.png",
+    "Bases/attachments/Pasted image 20221012222720.png",
+    "Bases/attachments/Pasted image 20220930214105.png",
+    "Bases/Interacciones/Ártico/attachments/Pasted image 20220930202457.png",
+    "operación de supervisión.md",
+    "Pasted image 20220930011632.png",
+    "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
+    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md"
+  ]
+}

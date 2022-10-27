@@ -4,20 +4,26 @@ import Lunar from "../lunar";
 import Submarine from "../submarine";
 import styles from "./stationsRenderer.module.scss";
 
-export default function StationsRenderer({ currentStation }) {
+export default function StationsRenderer({ experienceTimer, currentStation }) {
   function renderStation() {
-    switch (currentStation) {
+    switch (currentStation.id) {
       case "artic":
         return <Artic />;
-        break;
       case "submarine":
         return <Submarine />;
-        break;
       case "lunar":
         return <Lunar />;
-        break;
     }
   }
 
-  return <div className={styles.props}>{renderStation()}</div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.aside}>
+        <img src={`station-${currentStation.id}.svg`} alt="" />
+        <h2>Base {currentStation.name}</h2>
+        <div>{experienceTimer}</div>
+      </div>
+      <div>{renderStation()}</div>
+    </div>
+  );
 }
