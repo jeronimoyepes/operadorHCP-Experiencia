@@ -3,10 +3,9 @@ import { Layout } from "@/components/layout/Layout";
 import StationsRenderer from "@/components/stations/renderer";
 import styles from "./mainExperience.module.scss";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
-import Router from "next/router";
 
 export default function MainExperience() {
-  const [currentStation, setCurrentStation] = useState({});
+  const [currentStation, setCurrentStation] = useState();
 
   // Temporizador de la experiencia
   const [experienceTimer, setExperienceTimer] = useState("00:10:00");
@@ -18,7 +17,7 @@ export default function MainExperience() {
     // console.log(expericeTimeLeft);
     expericeTimeLeft--;
     if (expericeTimeLeft == 0) {
-      return window.location.replace("/finalReport");
+      return window.location.assign("/finalReport");
     }
 
     let minutes = Math.floor(expericeTimeLeft / 60);
@@ -28,12 +27,16 @@ export default function MainExperience() {
       `00:0${minutes}:${seconds < 10 ? "0" + seconds : seconds}`
     );
   }
-  // Temporizador de la experiencia
+  // Temporizador de la experiencia\
 
   useEffect(() => {
     setInterval(() => {
       updateCounter();
     }, 1000);
+  }, [])
+  
+
+  useEffect(() => {
     function handleKeyMain(e) {
       const key = e.key;
       if (key == "q") {
@@ -48,6 +51,7 @@ export default function MainExperience() {
     }
     window.addEventListener("keyup", handleKeyMain);
   }, []);
+
   return (
     <Layout title={"Supervisión"}>
       {currentStation ? (
@@ -60,7 +64,7 @@ export default function MainExperience() {
             </BorderContainer>
             <div className={styles.timerCont}>
               <div>
-                <p>{">>"} Tiempo restante para interrumpción del enlace</p>
+                <p>{">>"}Tiempo restante para interrumpción del enlace</p>
                 <div className={styles.timer}>{experienceTimer}</div>
                 <p>conéctate a alguna estación</p>
                 <img src="/conectSmall.png" alt="" />
