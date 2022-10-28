@@ -6,7 +6,7 @@ import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import { Layout } from "@/components/layout/Layout";
 
-export default function sateliteConection() {
+export default function SateliteConection() {
   const asideGeneralData = {
     // h1: "",
     // h2: "",

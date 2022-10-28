@@ -7,7 +7,7 @@ import styles from "../instructions.module.scss";
 import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
 
-const page2 = () => {
+const Page5 = () => {
   const pages = { prev: 4, next: 6 };
   const controlsData = [
     {
@@ -63,4 +63,4 @@ const page2 = () => {
   );
 };
 
-export default page2;
+export default Page5;

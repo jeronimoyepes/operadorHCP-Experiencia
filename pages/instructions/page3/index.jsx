@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
-
 // Modules
 import styles from "../instructions.module.scss";
 
 import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
 
-const page2 = () => {
+const Page3 = () => {
   const pages = { prev: 2, next: 4 };
   const pageCounter = [
     { fill: false },
@@ -45,4 +43,4 @@ const page2 = () => {
   );
 };
 
-export default page2;
+export default Page3;

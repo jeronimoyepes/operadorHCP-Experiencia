@@ -7,7 +7,7 @@ import styles from "../instructions.module.scss";
 import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
 
-const page1 = () => {
+const Page1 = () => {
   const pages = { prev: 0, next: 2 };
   const pageCounter = [
     { fill: true },
@@ -28,7 +28,7 @@ const page1 = () => {
           <h3>Bienvenido estimado operador.</h3>
           <p>
             el día de hoy estarás a cargo de supervisar las operaciones de
-            investigacion científica de las siguientes bases de observación:
+            investigacion científica de las siguientes estaciones de observación:
           </p>
           <div>
             <img src="/stationsList.png" alt="" />
@@ -39,4 +39,4 @@ const page1 = () => {
   );
 };
 
-export default page1;
+export default Page1;
