@@ -1,9 +1,61 @@
 @import "./styles/general.scss";
 
 .container {
-    display: flex;
+  display: flex;
 }
 
 .aside {
-    width: 30%;
+  margin-left: 20px;
+  max-width: 300px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  .stationIcon {
+    font-family: Bungee;
+    font-size: 1.7em;
+    h2 {
+      @include textGlow1($color-whey-opacity);
+    }
+    img {
+      height: 280px;
+      padding: 0 40px 60px 40px;
+    }
+  }
+  .windowName {
+    display: flex;
+    font-size: 2em;
+    border-top: $border-general;
+    border-bottom: $border-general;
+    padding: 60px 0;
+    margin: 40px 0;
+    p {
+      color: $color-whey-opacity;
+      line-height: 1.2em;
+    }
+  }
+  .timer {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 20px;
+    }
+    p {
+      @include textGlow1($color-whey-opacity);
+    }
+    h2 {
+      @include textGlow2($color-orange-opacity);
+      font-size: 2.5em;
+      font-family: "Chakra Petch";
+      color: $color-orange;
+    }
+  }
+}
+
+.renderStation {
+    border: $border-general;
+    margin: 40px;
+    padding: 40px;
+    width: 60%;
 }

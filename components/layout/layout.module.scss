@@ -9,12 +9,11 @@
   z-index: 400;
   top: 0;
   left: 0;
-  overflow: hidden;
 }
 
 .mainCont {
   max-width: 1800px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-y: hidden;
   height: 100vh;
 }

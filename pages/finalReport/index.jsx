@@ -3,7 +3,7 @@ import styles from "./finalReport.module.scss"
 
 export default function FinalReport() {
   return (
-    <Layout>
+    <Layout title={"Reporte"}>
       <div>Reporte Final</div>
     </Layout>
   );
