@@ -7,7 +7,19 @@ const keystrokes = {
   stationLunar: "e",
   switch: "i",
   start: "a",
-  potentiometer: {0:"o", 10:"1", 20:"2", 30:"3", 40:"4", 50:"5", 60:"6", 70:"7", 80:"8", 90:"9", 100:"0"}
+  potentiometer: {
+    "o": 0,
+    1: 10,
+    2: 20,
+    3: 30,
+    4: 40,
+    5: 50,
+    6: 60,
+    7: 70,
+    8: 80,
+    9: 90,
+    0: 100,
+  },
 };
 
 export default keystrokes;

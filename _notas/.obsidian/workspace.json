@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
+                "file": "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
+                "file": "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,15 +110,15 @@
   },
   "active": "18f85f3f7a0998bd",
   "lastOpenFiles": [
-    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
     "TODOs.md",
+    "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
+    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
     "Video.md",
     "Bases/Interacciones/Lunar/attachments/Pasted image 20221029210244.png",
     "Bases/Interacciones/Lunar/attachments/Pasted image 20221029210257.png",
     "Bases/Interacciones/Lunar/Untitled.md",
     "Bases/3. Base Lunar.md",
     "Bases/2. Base submarina.md",
-    "Bases/1. Base Ártico.md",
-    "Bases/Interacciones/Submarina/2. Restos de submarinos nucleares.md"
+    "Bases/1. Base Ártico.md"
   ]
 }

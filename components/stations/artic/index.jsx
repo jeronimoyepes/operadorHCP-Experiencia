@@ -4,6 +4,7 @@ import styles from "./artic.module.scss";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
+import SequenceInteraction from "@/components/interactions/sequenceInteraction";
 
 export default function Artic() {
   const context = useContext(Context);
@@ -39,11 +40,11 @@ export default function Artic() {
             <img src={`reportType-${currentInteractionData.type}.png`} alt="" />
           </div>
           <div className={styles.body}>{currentInteractionData.body}</div>
-          <div className={styles.sequence}>{currentInteractionData.sequence && (
-            <div>
-              <img src={currentInteractionData.sequence[0].path} alt="" />
-              {currentInteractionData.sequence[0].position}</div>
-          )}</div>
+          <div className={styles.sequence}>
+            {currentInteractionData.sequence && (
+              <SequenceInteraction sequence={currentInteractionData.sequence}/>
+            )}
+          </div>
           {currentInteractionData.actions && (
             <DecisionsInteraction
               currentInteractionData={currentInteractionData}
