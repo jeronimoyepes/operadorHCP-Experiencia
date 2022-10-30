@@ -7,6 +7,13 @@
 .main {
   border: $border-general;
   width: 80%;
+  .interactionImage {
+    margin-top: 30px;
+    text-align: center;
+    img {
+      max-height: 55vh;
+    }
+  }
 }
 
 .controls {
@@ -27,7 +34,8 @@
   align-items: center;
   justify-content: space-between;
   @include textGlow1($color-whey-opacity);
-  img{
+  img {
+    opacity: 0.4;
     height: 100px;
   }
 }

@@ -6,7 +6,7 @@
 - [ ] Cable para el jack
 
 
-- [ ] Definir el componente para hacer la toma de decisiones
+- [x] Definir el componente para hacer la toma de decisiones
 - [ ] Introducir todos los contenidos de las interacciones
 - [ ] Terminar el diseño de la interfaz de reportes finales
 	- [ ] Despedida y reinicio

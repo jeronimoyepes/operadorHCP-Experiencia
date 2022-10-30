@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { Context } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
 import SequenceInteraction from "@/components/interactions/sequenceInteraction";
+import BorderContainer from "@/components/borderContainer/BorderContainer";
 
 export default function StationTimeline({ interactionData }) {
   const context = useContext(Context);
@@ -42,9 +43,13 @@ export default function StationTimeline({ interactionData }) {
                 alt=""
               />
             </div>
-            <div className={styles.body}>{currentInteractionData.body}
-            {currentInteractionData.type == "image" && (
-              <img src={currentInteractionData.imagePath} alt="" />
+            <div className={styles.body}>
+              {currentInteractionData.body}
+              {currentInteractionData.type == "image" && (
+                <div className={styles.interactionImage}>
+                  <BorderContainer><img src={currentInteractionData.imagePath} alt="" /></BorderContainer>
+                  
+                </div>
               )}
             </div>
             <div className={styles.sequence}>
@@ -54,7 +59,7 @@ export default function StationTimeline({ interactionData }) {
                 />
               )}
             </div>
-            {currentInteractionData.actions && (
+            {currentInteractionData.actions?.length > 0 && (
               <DecisionsInteraction
                 currentInteractionData={currentInteractionData}
               />
@@ -62,13 +67,18 @@ export default function StationTimeline({ interactionData }) {
           </div>
 
           <div className={styles.controls}>
-            <p>Controles</p>
-              {currentInteractionData.type == "signal" && (
+            {currentInteractionData.type == "signal" && (
+              <>
+                <p>Controles</p>
                 <img src="instructionIcon-knob.svg" alt="" />
-              )}
-              {currentInteractionData.type == "sequence" && (
+              </>
+            )}
+            {currentInteractionData.type == "sequence" && (
+              <>
+                <p>Controles</p>
                 <img src="instructionIcon-slider.svg" alt="" />
-              )}
+              </>
+            )}
           </div>
         </>
       )}
