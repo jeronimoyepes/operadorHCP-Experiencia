@@ -42,9 +42,13 @@ export default function StationTimeline({ interactionData }) {
                 alt=""
               />
             </div>
-            <div className={styles.body}>{currentInteractionData.body}</div>
+            <div className={styles.body}>{currentInteractionData.body}
+            {currentInteractionData.type == "image" && (
+              <img src={currentInteractionData.imagePath} alt="" />
+              )}
+            </div>
             <div className={styles.sequence}>
-              {currentInteractionData.sequence && (
+              {currentInteractionData.type == "sequence" && (
                 <SequenceInteraction
                   sequence={currentInteractionData.sequence}
                 />
