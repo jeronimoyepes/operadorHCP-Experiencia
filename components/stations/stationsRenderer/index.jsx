@@ -19,7 +19,7 @@ export default function StationsRenderer({ experienceTimer, currentStation }) {
       case "lunar":
         return setInteractionData(lunarInteractions);
     }
-  }, []);
+  }, [currentStation]);
 
   return (
     <div className={styles.container}>

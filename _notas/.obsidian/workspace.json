@@ -23,11 +23,9 @@
             "id": "18f85f3f7a0998bd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
-                "mode": "source",
-                "source": false
+                "file": "Bases/Interacciones/Ártico/attachments/Pasted image 20221013223036.png"
               }
             }
           }
@@ -90,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
+                "file": "Bases/Interacciones/Ártico/attachments/Pasted image 20221013223036.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,17 +106,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "18f85f3f7a0998bd",
+  "active": "ee6080abd80a74c0",
   "lastOpenFiles": [
+    "Bases/Interacciones/Ártico/attachments/Pasted image 20221013224530.png",
+    "Bases/Interacciones/Ártico/attachments/Pasted image 20221012222939.png",
+    "Bases/Interacciones/Ártico/attachments/Pasted image 20220930202457.png",
     "TODOs.md",
-    "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
     "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
+    "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
     "Video.md",
     "Bases/Interacciones/Lunar/attachments/Pasted image 20221029210244.png",
     "Bases/Interacciones/Lunar/attachments/Pasted image 20221029210257.png",
-    "Bases/Interacciones/Lunar/Untitled.md",
-    "Bases/3. Base Lunar.md",
-    "Bases/2. Base submarina.md",
-    "Bases/1. Base Ártico.md"
+    "Bases/Interacciones/Lunar/Untitled.md"
   ]
 }

@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { Layout } from "@/components/layout/Layout";
-import StationsRenderer from "@/components/stations/renderer";
+import StationsRenderer from "@/components/stations/stationsRenderer";
 import styles from "./mainExperience.module.scss";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import keystrokes from "@/helpers/keystrokesValues";

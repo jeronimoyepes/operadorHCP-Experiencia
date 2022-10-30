@@ -10,11 +10,12 @@ export default function StationTimeline({ interactionData }) {
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 
+  const interactionTime = getTimeForEachInteraction(
+    context.experienceTotalDuration,
+    interactionData.length
+  );
+
   useEffect(() => {
-    const interactionTime = getTimeForEachInteraction(
-      context.experienceTotalDuration,
-      interactionData.length
-    );
     // Retornar la interacción cuyo rango de tiempo contenga el tiempo transcurrido de la experiencia
     interactionData.map((interaction) => {
       const interactionTimeLimit =
@@ -27,7 +28,7 @@ export default function StationTimeline({ interactionData }) {
         return setCurrentInteractionData(interaction);
       }
     });
-  }, [context.timeElapsed]);
+  }, [context.timeElapsed, interactionData]);
 
   return (
     <div className={styles.container}>
@@ -42,6 +43,10 @@ export default function StationTimeline({ interactionData }) {
             {currentInteractionData.sequence && (
               <SequenceInteraction sequence={currentInteractionData.sequence} />
             )}
+          </div>
+          <div className={styles.instructionVector}>
+            {currentInteractionData.type == "image" && <img src="" alt="" />}
+            {currentInteractionData.type == "sequence" && <img src="" alt="" />}
           </div>
           {currentInteractionData.actions && (
             <DecisionsInteraction
