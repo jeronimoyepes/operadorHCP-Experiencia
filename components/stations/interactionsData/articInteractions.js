@@ -1,4 +1,4 @@
-const interactionsData = [
+const articInteractions = [
   {
     title: "Presentación Elizabeth Dijkstra a operador de la H.C.P.",
     type: "text",
@@ -59,4 +59,4 @@ const interactionsData = [
   },
 ];
 
-export { interactionsData };
+export { articInteractions };

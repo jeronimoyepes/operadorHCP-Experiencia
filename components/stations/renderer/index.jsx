@@ -1,14 +1,16 @@
-import { useEffect } from "react";
-import Artic from "../artic";
+import Station from "../station";
 import Lunar from "../lunar";
 import Submarine from "../submarine";
 import styles from "./stationsRenderer.module.scss";
+
+// Datos de interacción de cada estación
+import { articInteractions } from "../interactionsData/articInteractions";
 
 export default function StationsRenderer({ experienceTimer, currentStation }) {
   function renderStation() {
     switch (currentStation.id) {
       case "artic":
-        return <Artic />;
+        return <Station interactionData={articInteractions} />;
       case "submarine":
         return <Submarine />;
       case "lunar":

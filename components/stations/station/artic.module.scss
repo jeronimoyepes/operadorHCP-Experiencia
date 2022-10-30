@@ -8,6 +8,9 @@
   align-items: center;
   justify-content: space-between;
   @include textGlow1($color-whey-opacity);
+  img{
+    height: 100px;
+  }
 }
 
 .body {
