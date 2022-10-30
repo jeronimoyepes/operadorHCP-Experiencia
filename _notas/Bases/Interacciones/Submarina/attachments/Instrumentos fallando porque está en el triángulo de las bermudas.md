@@ -1,0 +1,10 @@
+Ryan Black a Operador. 
+Inicio del reporte del día 20 al 23 del mes 7 del a;o 1968. 
+
+Acabamos de sobrevivir a los peores 4 días de nuestra existencia. El pasado 20 de julio salí con el equipo de exploración #2 con el objetivo de mapear las posibles alteraciones que caracterizan al triángulo. 
+
+Después de superar los 10 km en dirección al vórtice del triángulo, todos los instrumentos de localización empezaron a presentar fallas imperceptibles en un inicio, pero después de 30 minutos, 23 km en dirección al vórtice, o eso pensábamos, llegamos a la conclusión de no saber hacia dónde navegábamos. 
+
+Luego de 3 días de navegar en la superficie hacia el este, guiándonos únicamente por el sol, pudimos entrar en una zona sin alteraciones y volver a la base. Los tripulantes estaban hambrientos, asustados y se muestran reacios a reemprender la exploración. 
+
+Fin del reporte.

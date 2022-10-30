@@ -1,8 +1,8 @@
 | Control | key |
 |---------|---|
-| button0 | z |
-| button1 | x |
-| button2 | c |
+| button1 | z |
+| button2 | x |
+| button3 | c |
 | stationArtic | q |
 | stationSubmarine | w |
 | stationLunar | e |

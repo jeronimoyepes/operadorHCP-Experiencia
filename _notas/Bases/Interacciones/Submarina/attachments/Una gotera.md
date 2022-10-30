@@ -1,0 +1,8 @@
+Black se reporta a operador. 
+Día 1 del mes 8 del a;o 1968.
+
+Hoy me despertó una gota de agua cayéndome en la cara y pensé que estábamos bajo ataque. Después de entrar en pánico, recordar que soy el director, recobrar el aliento y contactar al equipo de mantenimiento de la base; me indican que puede deberse a una fisura. 
+
+!Una fisura! !A 200mts bajo el nivel del mar! Por más absurdo que parezca, me causa gran preocupación durante cuánto tiempo soportará la presión nuestra base. Solicito por favor que envíen el equipo de mantenimiento lo más pronto posible. 
+
+Fin del reporte.
