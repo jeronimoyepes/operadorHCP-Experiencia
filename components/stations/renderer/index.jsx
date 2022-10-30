@@ -1,22 +1,25 @@
 import Station from "../station";
-import Lunar from "../lunar";
-import Submarine from "../submarine";
+import { useState } from "react";
 import styles from "./stationsRenderer.module.scss";
 
 // Datos de interacción de cada estación
 import { articInteractions } from "../interactionsData/articInteractions";
+import { submarineInteractions } from "../interactionsData/submarineInteractions";
+import { lunarInteractions } from "../interactionsData/lunarInteractions";
 
 export default function StationsRenderer({ experienceTimer, currentStation }) {
-  function renderStation() {
+  const [interactionData, setInteractionData] = useState();
+
+  useEffect(() => {
     switch (currentStation.id) {
       case "artic":
-        return <Station interactionData={articInteractions} />;
+        return setInteractionData(articInteractions);
       case "submarine":
-        return <Submarine />;
+        return setInteractionData(submarineInteractions);
       case "lunar":
-        return <Lunar />;
+        return setInteractionData(lunarInteractions);
     }
-  }
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -37,7 +40,9 @@ export default function StationsRenderer({ experienceTimer, currentStation }) {
           </div>
         </div>
       </div>
-      <div className={styles.renderStation}>{renderStation()}</div>
+      <div className={styles.renderStation}>
+        <Station interactionData={interactionData} />
+      </div>
     </div>
   );
 }
