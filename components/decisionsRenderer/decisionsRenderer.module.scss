@@ -1,0 +1,27 @@
+@import "./styles/general.scss";
+
+.container {
+  padding-top: 20px;
+  border-top: $border-general;
+  .buttons {
+    display: flex;
+    justify-content: center;    
+  }
+  .response {
+    font-family: 'Fira Code', monospace;
+    padding: 40px;
+    font-weight: 400;
+    h2 {
+        color: $color-blue-opacity;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    p {
+        color: $background-color;
+        padding: 10px;
+        font-size: 1.6em;
+        font-weight: 600;
+        background-color: $color-whey;
+    }
+  }
+}

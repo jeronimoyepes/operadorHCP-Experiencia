@@ -1,0 +1,13 @@
+!!!!Operador es un calamar gigante!!!! Si mis ojos no me fallan y no estamos sufriendo una alucinación colectiva, acabamos de ver lo que parece ser el calamar gigante más grande avistado por el equipo y quién sabe si del gremio!
+
+Ehhh... Habla Ryan Black a operador. Lo lamento.
+
+Inicio del reporte del día 3 del mes 7 del a;o 1968, 12:57 horas. 
+El equipo de exploración #2 de la base submarina, después de 3 horas 27 minutos de recorrido, avistó lo que parecía ser un calamar gigante, por las dimensiones, !podría tratarse de un ejemplar de más de 23 metros de longitud! 
+
+Lamentamos la poca definición de la imagen sin embargo fue un avistamiento de improvisto.
+
+![[attachments/Giant Squid.jpg]]
+
+
+

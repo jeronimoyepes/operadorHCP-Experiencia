@@ -1,3 +1,4 @@
+import DecisionsRenderer from "../../decisionsRenderer";
 import { interactionsData } from "./interactions";
 import styles from "./artic.module.scss";
 import { useContext, useEffect, useState } from "react";
@@ -28,11 +29,28 @@ export default function Artic() {
       }
     });
   }, [context.timeElapsed]);
-  const today = new Date();
+
   return (
     <div className={styles.container}>
-      <div className={styles.title}>{today.toDateString()}</div>
-      {currentInteractionData && currentInteractionData.name}
+      {currentInteractionData && (
+        <>
+          <div className={styles.header}>
+            {currentInteractionData.title}
+            <img src={`reportType-${currentInteractionData.type}.png`} alt="" />
+          </div>
+          <div className={styles.body}>{currentInteractionData.body}</div>
+          <div className={styles.sequence}>{currentInteractionData.sequence && (
+            <div>
+              <img src={currentInteractionData.sequence[0].path} alt="" />
+              {currentInteractionData.sequence[0].position}</div>
+          )}</div>
+          {currentInteractionData.actions && (
+            <DecisionsRenderer
+              currentInteractionData={currentInteractionData}
+            />
+          )}
+        </>
+      )}
     </div>
   );
 }

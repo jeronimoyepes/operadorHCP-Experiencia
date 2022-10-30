@@ -1,0 +1,19 @@
+@import "./styles/general.scss";
+
+.control {
+  padding: 0 20px;
+  text-align: center;
+  @include textGlow1($color-blue-opacity);
+
+  img {
+    width: 160px;
+    margin-bottom: 5px;
+  }
+  p {
+    text-align: center;
+    line-height: 1em;
+    font-size: 1.5em;
+    max-width: 220px;
+    color: $color-blue;
+  }
+}

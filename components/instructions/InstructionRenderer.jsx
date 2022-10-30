@@ -7,6 +7,7 @@ import { Layout } from "@/components/layout/Layout";
 
 import styles from "./instructionRenderer.module.scss";
 import ControlsPannel from "../controlsPannel/ControlsPannel";
+import keystrokesValues from "@/helpers/keystrokesValues";
 
 export default function InstructionRenderer({
   children,
@@ -24,7 +25,7 @@ export default function InstructionRenderer({
   useEffect(() => {
     function handleKeyInstructions(e) {
       const key = e.key;
-      if (key == "z") {
+      if (key == keystrokesValues.button0) {
         // Capturar si es la última pantalla de las instrucciones
         if (pages.next == 6) {
           window.removeEventListener("keyup", handleKeyInstructions);
@@ -33,7 +34,7 @@ export default function InstructionRenderer({
           Router.push(`./page${pages.next}`);
         }
       }
-      if (key == "c") {
+      if (key == keystrokesValues.button2) {
         if (pages.prev == 0) {
           return null;
         } else {

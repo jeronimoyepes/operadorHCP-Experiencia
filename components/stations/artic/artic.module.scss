@@ -1,1 +1,18 @@
 @import "./styles/general.scss";
+
+.header {
+  border-bottom: $border-general;
+  padding: 20px 40px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include textGlow1($color-whey-opacity);
+}
+
+.body {
+  font-family: "Fira Code", monospace;
+  padding: 60px 40px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}

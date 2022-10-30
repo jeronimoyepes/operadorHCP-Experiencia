@@ -18,7 +18,7 @@ const Page1 = () => {
   const controlsData = [
     {
       name: "siguiente >",
-      image: "/button-1.svg",
+      image: "/button-0.svg",
     }
   ];
   return (

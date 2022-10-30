@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import StationsRenderer from "@/components/stations/renderer";
 import styles from "./mainExperience.module.scss";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
+import keystrokes from "@/helpers/keystrokesValues";
 
 export const Context = createContext();
 
@@ -10,10 +11,13 @@ export default function MainExperience() {
   const [currentStation, setCurrentStation] = useState();
   const [timeElapsed, setTimeLeft] = useState();
 
-  // Temporizador de la experiencia
-  const [experienceTimer, setExperienceTimer] = useState("00:10:00");
+  // Duración de la experiencia en minutos
+  const durationMinutes = 1
 
-  const experienceTotalDuration = 1 * 60;
+  // Temporizador de la experiencia
+  const [experienceTimer, setExperienceTimer] = useState(`00:${durationMinutes}:00`);
+
+  const experienceTotalDuration = durationMinutes * 60;
   let experienceTimeLeft = experienceTotalDuration;
 
   function updateCounter() {
@@ -41,13 +45,13 @@ export default function MainExperience() {
   useEffect(() => {
     function handleKeyMain(e) {
       const key = e.key;
-      if (key == "q") {
+      if (key == keystrokes.stationArtic) {
         setCurrentStation({ id: "artic", name: "Polar" });
       }
-      if (key == "w") {
+      if (key == keystrokes.stationSubmarine) {
         setCurrentStation({ id: "submarine", name: "Submarina" });
       }
-      if (key == "e") {
+      if (key == keystrokes.stationLunar) {
         setCurrentStation({ id: "lunar", name: "Lunar" });
       }
     }
@@ -70,7 +74,7 @@ export default function MainExperience() {
               </BorderContainer>
               <div className={styles.timerCont}>
                 <div>
-                  <p>{">>"}Tiempo restante para interrumpción del enlace</p>
+                  <p>{">>"}Tiempo restante para interrupción del enlace</p>
                   <div className={styles.timer}>{experienceTimer}</div>
                   <p>conéctate a alguna estación</p>
                   <img src="/conectSmall.png" alt="" />

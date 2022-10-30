@@ -18,11 +18,11 @@ const Page4 = () => {
   const controlsData = [
     {
       name: "siguiente >",
-      image: "/button-1.svg",
+      image: "/button-0.svg",
     },
     {
       name: "< anterior",
-      image: "/button-3.svg",
+      image: "/button-2.svg",
     },
   ];
   return (

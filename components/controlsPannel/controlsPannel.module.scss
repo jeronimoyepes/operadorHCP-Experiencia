@@ -2,7 +2,6 @@
 
 .container {
   text-align: center;
-  // max-width: 250px;
   padding-top: 30px;
   
   > div {
@@ -13,6 +12,7 @@
   }
   .control {
     padding: 20px 40px;
+    margin-bottom: 30px;
     border-top: $border-general;
     border-bottom: $border-general;
     @include textGlow1($color-blue-opacity);
@@ -25,8 +25,8 @@
       font-size: 1.5em;
       color: $color-blue;
     }
-    &:first-child {
-        margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
     }
   }
 }

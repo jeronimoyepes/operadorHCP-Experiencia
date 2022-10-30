@@ -1,0 +1,22 @@
+- [x] Comprar epoxy
+- [x] Comprar silicona o similar
+- [ ] Tornillos y clavos
+- [x] Sacar adhesivo (Propalcote 70 y Adhesivo)
+- [ ] Comprar Knobs o imprimir 3D
+- [ ] Cable para el jack
+
+
+- [x] Definir el componente para hacer la toma de decisiones
+- [ ] Introducir todos los contenidos de las interacciones
+- [ ] Terminar el diseño de la interfaz de reportes finales
+	- [ ] Despedida y reinicio
+- [ ] Desarrollar el backend para capturar los datos de usuario
+	- [ ] Iniciar la base de datos de Firebase
+		- [ ] Conectarla al proyecto
+	- [ ] Crear la ruta de captura de datos
+	- [ ] Crear ruta de envío de reporte de operados
+	- [ ] Ruta para descargar toda la DB
+- [ ] Capturar los datos de usuario en cada pantalla
+- [ ] Terminar la conexión del puerto Jack
+- [ ] (Opcional) Buscar sonidos para ambientar
+	- [ ] Puede haber una ambientación diferente para cada estación

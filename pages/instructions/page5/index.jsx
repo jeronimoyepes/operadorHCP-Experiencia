@@ -6,35 +6,29 @@ import styles from "../instructions.module.scss";
 
 import InstructionRenderer from "@/components/instructions/InstructionRenderer";
 import { Layout } from "@/components/layout/Layout";
+import keystrokesValues from "@/helpers/keystrokesValues";
 
 const Page5 = () => {
   const pages = { prev: 4, next: 6 };
   const controlsData = [
     {
       name: "¡comenzar!",
-      image: "/button-1.svg",
-    },
-    {
-      name: "agradecer a la HCP",
-      image: "/button-2.svg",
+      image: "/button-0.svg",
     },
     {
       name: "renunciar",
-      image: "/button-3.svg",
+      image: "/button-1.svg",
+    },
+    {
+      name: "regresar",
+      image: "/button-2.svg",
     },
   ];
   useEffect(() => {
     function handleKeyEndInstructions(e) {
       const key = e.key;
-      if (key == "z") {
-        document.removeEventListener("keyup", handleKeyEndInstructions);
-        return location.replace("/sateliteConection")
-      }
-      if (key == "x") {
+      if (key == keystrokesValues.button0) {
         console.log("Agradecer a la HCP")
-      }
-      if (key == "c") {
-        console.log("Renunciar")
       }
     }
     document.addEventListener("keyup", handleKeyEndInstructions);
@@ -51,7 +45,7 @@ const Page5 = () => {
             rendimiento.
           </p>
           <p>
-            Continua querido operador, la iniciativa científica HCP espera
+            Continúa querido operador, la iniciativa científica HCP espera
             grandes cosas de ti.
           </p>
           <p>

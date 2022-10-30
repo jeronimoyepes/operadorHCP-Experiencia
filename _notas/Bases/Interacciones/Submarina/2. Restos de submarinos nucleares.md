@@ -1,0 +1,18 @@
+Ryan Black habla. 
+Inicio del reporte del día 25 del mes 6 del a;o 1968, 9:03 horas. 
+
+Hoy el equipo de exploración # 3 presentó reporte fotográfico en el cual se identificaron 4 submarinos nucleares abandonados.
+Procedencia: Desconocida
+Ubicación: 4.2km en sentido sur de la base de investigación
+Detalles: uno de los submarinos se encuentra encallado en la costa más cercana a la base, otro se encuentra hundido en las profundidades a menos de 1km de la orilla y 2 siguen flotando a pesar del evidente deterioro.  
+![[attachments/Submarine 4.jpg]]
+![[attachments/Submarine 2.jpeg]]
+
+![[attachments/Submarine 3.jpg]]
+
+
+![[Submarine 1 1.jpg]]
+
+Aún no ha sido posible de identificar la procedencia de estos por las condiciones de deterioro o si las causas se deben al lugar en que nos encontramos.
+
+Fin del reporte. 
