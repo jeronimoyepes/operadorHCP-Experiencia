@@ -1,5 +1,5 @@
 import DecisionsInteraction from "../../interactions/decisionsInteraction";
-import styles from "./artic.module.scss";
+import styles from "./stationTimeline.module.scss";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
@@ -34,25 +34,38 @@ export default function StationTimeline({ interactionData }) {
     <div className={styles.container}>
       {currentInteractionData && (
         <>
-          <div className={styles.header}>
-            {currentInteractionData.title}
-            <img src={`reportType-${currentInteractionData.type}.png`} alt="" />
-          </div>
-          <div className={styles.body}>{currentInteractionData.body}</div>
-          <div className={styles.sequence}>
-            {currentInteractionData.sequence && (
-              <SequenceInteraction sequence={currentInteractionData.sequence} />
+          <div className={styles.main}>
+            <div className={styles.header}>
+              {currentInteractionData.title}
+              <img
+                src={`reportType-${currentInteractionData.type}.svg`}
+                alt=""
+              />
+            </div>
+            <div className={styles.body}>{currentInteractionData.body}</div>
+            <div className={styles.sequence}>
+              {currentInteractionData.sequence && (
+                <SequenceInteraction
+                  sequence={currentInteractionData.sequence}
+                />
+              )}
+            </div>
+            {currentInteractionData.actions && (
+              <DecisionsInteraction
+                currentInteractionData={currentInteractionData}
+              />
             )}
           </div>
-          <div className={styles.instructionVector}>
-            {currentInteractionData.type == "image" && <img src="" alt="" />}
-            {currentInteractionData.type == "sequence" && <img src="" alt="" />}
+
+          <div className={styles.controls}>
+            <p>Controles</p>
+              {currentInteractionData.type == "signal" && (
+                <img src="instructionIcon-knob.svg" alt="" />
+              )}
+              {currentInteractionData.type == "sequence" && (
+                <img src="instructionIcon-slider.svg" alt="" />
+              )}
           </div>
-          {currentInteractionData.actions && (
-            <DecisionsInteraction
-              currentInteractionData={currentInteractionData}
-            />
-          )}
         </>
       )}
     </div>

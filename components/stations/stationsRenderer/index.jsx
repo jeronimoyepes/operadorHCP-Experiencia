@@ -5,7 +5,7 @@ import styles from "./stationsRenderer.module.scss";
 // Datos de interacción de cada estación
 import { articInteractions } from "../interactionsData/articInteractions";
 import { submarineInteractions } from "../interactionsData/submarineInteractions";
-import { lunarInteractions } from "../interactionsData/lunarInteractions";
+import { lunarInteractions } from "../interactionsData/lunarInteractions";  
 
 export default function StationsRenderer({ experienceTimer, currentStation }) {
   const [interactionData, setInteractionData] = useState();

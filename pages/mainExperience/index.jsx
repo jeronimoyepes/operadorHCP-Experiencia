@@ -12,7 +12,7 @@ export default function MainExperience() {
   const [timeElapsed, setTimeLeft] = useState();
 
   // Duración de la experiencia en minutos
-  const durationMinutes = 1
+  const durationMinutes = 10
 
   // Temporizador de la experiencia
   const [experienceTimer, setExperienceTimer] = useState(`00:${durationMinutes}:00`);

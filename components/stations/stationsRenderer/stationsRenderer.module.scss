@@ -4,6 +4,11 @@
   display: flex;
 }
 
+.renderStation {
+  margin: 40px;
+  width: 80%;
+}
+
 .aside {
   margin-left: 20px;
   max-width: 300px;
@@ -53,8 +58,4 @@
   }
 }
 
-.renderStation {
-    border: $border-general;
-    margin: 40px;
-    width: 60%;
-}
+

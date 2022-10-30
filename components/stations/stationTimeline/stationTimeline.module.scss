@@ -1,0 +1,40 @@
+@import "./styles/general.scss";
+
+.container {
+  display: flex;
+}
+
+.main {
+  border: $border-general;
+  width: 80%;
+}
+
+.controls {
+  text-align: center;
+  width: 250px;
+  padding-top: 20%;
+  img {
+    padding: 20px;
+    width: 100%;
+  }
+}
+
+.header {
+  border-bottom: $border-general;
+  padding: 15px 40px;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include textGlow1($color-whey-opacity);
+  img{
+    height: 100px;
+  }
+}
+
+.body {
+  font-family: "Fira Code", monospace;
+  padding: 40px 40px;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
