@@ -1,4 +1,4 @@
-import DecisionsRenderer from "../../decisionsRenderer";
+import DecisionsInteraction from "../../interactions/decisionsInteraction";
 import { interactionsData } from "./interactions";
 import styles from "./artic.module.scss";
 import { useContext, useEffect, useState } from "react";
@@ -45,7 +45,7 @@ export default function Artic() {
               {currentInteractionData.sequence[0].position}</div>
           )}</div>
           {currentInteractionData.actions && (
-            <DecisionsRenderer
+            <DecisionsInteraction
               currentInteractionData={currentInteractionData}
             />
           )}

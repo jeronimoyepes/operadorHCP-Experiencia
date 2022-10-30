@@ -1,9 +1,9 @@
 import keystrokes from "@/helpers/keystrokesValues";
 import { useEffect, useState } from "react";
-import ControlButton from "../controlButton";
-import styles from "./decisionsRenderer.module.scss";
+import ControlButton from "../../controlButton";
+import styles from "./decisionsInteraction.module.scss";
 
-export default function DecisionsRenderer({ currentInteractionData }) {
+export default function DecisionsInteraction({ currentInteractionData }) {
   const [decisionTaken, setDecisionTaken] = useState(null);
 
   useEffect(() => {
