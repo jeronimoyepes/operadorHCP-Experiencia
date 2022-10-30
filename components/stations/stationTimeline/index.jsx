@@ -5,17 +5,16 @@ import { Context } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
 import SequenceInteraction from "@/components/interactions/sequenceInteraction";
 
-export default function Station({interactionData}) {
+export default function StationTimeline({ interactionData }) {
   const context = useContext(Context);
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 
-  const interactionTime = getTimeForEachInteraction(
-    context.experienceTotalDuration,
-    interactionData.length
-  );
-
   useEffect(() => {
+    const interactionTime = getTimeForEachInteraction(
+      context.experienceTotalDuration,
+      interactionData.length
+    );
     // Retornar la interacción cuyo rango de tiempo contenga el tiempo transcurrido de la experiencia
     interactionData.map((interaction) => {
       const interactionTimeLimit =

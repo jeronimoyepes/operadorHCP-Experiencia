@@ -1,5 +1,5 @@
-import Station from "../station";
-import { useState } from "react";
+import StationTimeline from "../stationTimeline";
+import { useEffect, useState } from "react";
 import styles from "./stationsRenderer.module.scss";
 
 // Datos de interacción de cada estación
@@ -41,7 +41,9 @@ export default function StationsRenderer({ experienceTimer, currentStation }) {
         </div>
       </div>
       <div className={styles.renderStation}>
-        <Station interactionData={interactionData} />
+        {interactionData && (
+          <StationTimeline interactionData={interactionData} />
+        )}
       </div>
     </div>
   );
