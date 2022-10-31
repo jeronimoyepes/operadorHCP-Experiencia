@@ -4,15 +4,13 @@ import StationsRenderer from "@/components/stations/stationsRenderer";
 import styles from "./mainExperience.module.scss";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import keystrokes from "@/helpers/keystrokesValues";
+import {durationMinutes} from "@/helpers/experienceDuration"
 
 export const Context = createContext();
 
 export default function MainExperience() {
   const [currentStation, setCurrentStation] = useState();
   const [timeElapsed, setTimeLeft] = useState();
-
-  // Duración de la experiencia en minutos
-  const durationMinutes = 10
 
   // Temporizador de la experiencia
   const [experienceTimer, setExperienceTimer] = useState(`00:${durationMinutes}:00`);

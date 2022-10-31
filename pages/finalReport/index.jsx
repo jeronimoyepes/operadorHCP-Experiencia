@@ -6,6 +6,7 @@ import { lunarInteractions } from "@/components/stations/interactionsData/lunarI
 import { submarineInteractions } from "@/components/stations/interactionsData/submarineInteractions";
 
 export default function FinalReport() {
+
   const stationData = {
     artic: {
       name: "Ártico",
@@ -44,6 +45,12 @@ export default function FinalReport() {
           stationData={stationData.lunar}
           timeLineData={lunarInteractions}
         />
+      </div>
+      <div className={styles.timeLabel}>
+        <div className={styles.lines}>
+          
+        </div>
+        <p>Tiempo en línea</p>
       </div>
     </Layout>
   );
