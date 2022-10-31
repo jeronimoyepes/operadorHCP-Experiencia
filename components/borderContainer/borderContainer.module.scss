@@ -17,11 +17,18 @@
     width: 40px;
     height: auto;
   }
+  .warnlines{
+    width: auto;
+    max-width: 600px;
+  }
 }
 
 .topBorder {
   img:first-child {
     transform: rotate(270deg);
+  }
+  .warnlines{
+    margin-left: auto;
   }
 }
 
@@ -32,4 +39,8 @@
   img:last-child {
     transform: rotate(90deg);
   }
+  .warnlines{
+    margin-right: auto;
+  }
+
 }
