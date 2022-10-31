@@ -47,8 +47,9 @@ export default function StationTimeline({ interactionData }) {
               {currentInteractionData.body}
               {currentInteractionData.type == "image" && (
                 <div className={styles.interactionImage}>
-                  <BorderContainer><img src={currentInteractionData.imagePath} alt="" /></BorderContainer>
-                  
+                  <BorderContainer>
+                    <img src={currentInteractionData.imagePath} alt="" />
+                  </BorderContainer>
                 </div>
               )}
             </div>
