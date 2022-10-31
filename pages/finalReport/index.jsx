@@ -1,7 +1,10 @@
+import { TimeLine } from '../../components/timeLine/timeLine';
 import { Layout } from "@/components/layout/Layout";
 import styles from "./finalReport.module.scss";
+import { articInteractions } from '@/components/stations/interactionsData/articInteractions';
 
 export default function FinalReport() {
+
   return (
     <Layout title={"Reporte"}>
       <div className={styles.header}>
@@ -13,15 +16,7 @@ export default function FinalReport() {
       </div>
       <div className={styles.timelines}>
         <p>Estaciones</p>
-        <div>
-          <div className={styles.label}>
-            <img src="station-lunar.svg" alt="Lunar" />
-            <p>Lunar</p>
-          </div>
-          <div className={styles.line}>
-            
-          </div>
-        </div>
+        <TimeLine timeLineData={articInteractions}/>
       </div>
     </Layout>
   );
