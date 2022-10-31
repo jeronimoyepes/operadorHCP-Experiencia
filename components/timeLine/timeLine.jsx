@@ -1,18 +1,30 @@
 import styles from "./timeLine.module.scss";
 
-export function TimeLine({ timeLineData }) {
+export function TimeLine({ timeLineData, stationData }) {
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.label}>
-        <img src="station-lunar.svg" alt="Lunar" />
-        <p>Lunar</p>
+        <img src={`station-${stationData.id}.svg`} alt="Lunar" />
+        <p>{stationData.name}</p>
       </div>
       <div className={styles.line}>
-        {timeLineData.map((moment) => {
-          <div className={styles.moment}>
-            <img src={`reportType-${moment.type}.svg`} alt="" />
-            <img src="momentSeparator.svg" alt="" />
-          </div>;
+        {timeLineData.map((momment) => {
+          return (
+            <>
+              <div className={styles.momment}>
+                <img
+                  className={styles.interactionIcon}
+                  src={`reportType-${momment.type}.svg`}
+                  alt=""
+                />
+              </div>
+              <img
+                className={styles.separator}
+                src="momentSeparator.svg"
+                alt=""
+              />
+            </>
+          );
         })}
       </div>
     </div>
