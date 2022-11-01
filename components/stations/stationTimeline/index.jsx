@@ -55,9 +55,11 @@ export default function StationTimeline({ interactionData }) {
             </div>
             <div className={styles.sequence}>
               {currentInteractionData.type == "sequence" && (
-                <SequenceInteraction
-                  sequence={currentInteractionData.sequence}
-                />
+                <BorderContainer>
+                  <SequenceInteraction
+                    sequence={currentInteractionData.sequence}
+                  />
+                </BorderContainer>
               )}
             </div>
             {currentInteractionData.actions?.length > 0 && (

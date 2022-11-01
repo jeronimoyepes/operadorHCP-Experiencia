@@ -1,50 +1,30 @@
 const articInteractions = [
   {
     title: "Presentación Elizabeth Dijkstra a operador de la H.C.P.",
-    type: "image",
-    body: "Hola operador, mi nombre es Elizabeth Dijkstra y seré la investigadora encargada de reportar los hallazgos de nuestra base en el Ártico. Soy bióloga especialista en ecología y biología acuática, líder del laboratorio de investigación desde hace 8 meses, y a cargo de un equipo de profesionales altamente capacitados según me indicaron en el reporte de ingreso, sobre esto aún albergo mis dudas.",
+    type: "text",
+    body: "Hola operador, mi nombre es Elizabeth Dijkstra y seré la investigadora encargada de reportar los hallazgos de nuestra base en el Ártico. Soy bióloga especialista en ecología y biología marina, líder del laboratorio de investigación desde hace 8 meses, y estoy a cargo de un equipo de profesionales altamente capacitados según lo indicado en el reporte de ingreso, sobre esto aún albergo mis dudas. Espero poder contar con ustedes para llevar a cabo mi... digo, nuestras investigaciones de manera exitosa.",
     imagePath: "randomCode.png",
-    sequence: [
+    sequence: [],
+    actions: [
       {
-        path: "randomCode.png",
-        position: 20,
-      },
-      {
-        path: "stationsList.png",
-        position: 30,
+        name: "Saludar",
+        response: "Un saludo cordial ha sido enviado.",
       },
     ],
-    actions: [],
   },
   {
-    title: "Informe derretimiento de los glaciares",
+    title: "Presentación Elizabeth Dijkstra a operador de la H.C.P.",
     type: "sequence",
-    body: "Esta mañana observamos en las imágenes satelitales que los glaciares se derriten a un ritmo acelerado en relación con el año pasado en el mismo periodo de tiempo, las proyecciones no son alentadoras, Venecia ahora es un romántico arrecife de coral y Holanda es un país aun más bajo.",
+    body: "Hola operador, mi nombre es Elizabeth Dijkstra y seré la investigadora encargada de reportar los hallazgos de nuestra base en el Ártico. Soy bióloga especialista en ecología y biología marina, líder del laboratorio de investigación desde hace 8 meses, y estoy a cargo de un equipo de profesionales altamente capacitados según lo indicado en el reporte de ingreso, sobre esto aún albergo mis dudas. Espero poder contar con ustedes para llevar a cabo mi... digo, nuestras investigaciones de manera exitosa.",
     imagePath: "randomCode.png",
     sequence: [
-      {
-        path: "cutSatelite.png",
-        position: 20,
-      },
-      {
-        path: "instruction-connect.png",
-        position: 30,
-      },
+      // TODO: pendiente 
+      // {
+      //   path: "articMedia/1sequence/5.png",
+      //   position: 10,
+      // },
     ],
-    // actions: [
-    //   {
-    //     name: "Enviar ropa sucia",
-    //     response: "Ropa sucia enviada"
-    //   },
-    //   {
-    //     name: "Despedir",
-    //     response: "Me estoy despidiendo"
-    //   },
-    //   {
-    //     name: "Saludar2",
-    //     response: "Te saludo por segunda vez"
-    //   },
-    // ],
+    actions: [],
   },
 ];
 

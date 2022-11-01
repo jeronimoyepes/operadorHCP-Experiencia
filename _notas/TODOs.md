@@ -6,17 +6,20 @@
 - [ ] Cable para el jack
 
 
-- [ ] Definir el componente para hacer la toma de decisiones
+- [x] Definir el componente para hacer la toma de decisiones
 - [ ] Introducir todos los contenidos de las interacciones
-- [ ] Terminar el diseño de la interfaz de reportes finales
-	- [ ] Despedida y reinicio
+- [x] Terminar el diseño de la interfaz de reportes finales
+	- [x] Despedida y reinicio
 - [ ] Desarrollar el backend para capturar los datos de usuario
 	- [ ] Iniciar la base de datos de Firebase
 		- [ ] Conectarla al proyecto
 	- [ ] Crear la ruta de captura de datos
 	- [ ] Crear ruta de envío de reporte de operados
-	- [ ] Ruta para descargar toda la DB
+	- [ ] Ruta para descargar toda la DB (Excel)
 - [ ] Capturar los datos de usuario en cada pantalla
+- [ ] Pantalla de inicio
 - [ ] Terminar la conexión del puerto Jack
+- [ ] Trivia al final de la experiencia
+- [ ] Colores en los textos
 - [ ] (Opcional) Buscar sonidos para ambientar
 	- [ ] Puede haber una ambientación diferente para cada estación

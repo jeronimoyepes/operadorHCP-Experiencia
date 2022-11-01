@@ -21,6 +21,11 @@
   }
 }
 
-.timeLabel {
+.minutesLabel {
+  .minutes {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 130px;
+  }
   text-align: center;
 }

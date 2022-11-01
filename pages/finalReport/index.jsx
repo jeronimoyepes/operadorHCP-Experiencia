@@ -4,6 +4,8 @@ import styles from "./finalReport.module.scss";
 import { articInteractions } from "@/components/stations/interactionsData/articInteractions";
 import { lunarInteractions } from "@/components/stations/interactionsData/lunarInteractions";
 import { submarineInteractions } from "@/components/stations/interactionsData/submarineInteractions";
+import { durationMinutes } from "@/helpers/experienceDuration";
+import { useState } from "react";
 
 export default function FinalReport() {
 
@@ -21,6 +23,13 @@ export default function FinalReport() {
       id: "lunar",
     },
   };
+
+
+  let minutesAmount = [];
+
+  for (let i = 0; i <= durationMinutes; i++) {
+    minutesAmount.push(<span>{i}m</span>)
+  }
 
   return (
     <Layout title={"Reporte"}>
@@ -46,10 +55,10 @@ export default function FinalReport() {
           timeLineData={lunarInteractions}
         />
       </div>
-      <div className={styles.timeLabel}>
-        <div className={styles.lines}>
-          
-        </div>
+      <div className={styles.minutesLabel}>
+        <div className={styles.minutes}>{minutesAmount.map(minute => {
+          return minute
+        })}</div>
         <p>Tiempo en línea</p>
       </div>
     </Layout>

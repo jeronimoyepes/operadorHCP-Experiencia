@@ -1,18 +1,20 @@
 const submarineInteractions = [
   {
-    title: "Submarina",
-    type: "text",
-    body: "Hola operador, mi nombre es Elizabeth Dijkstra y seré la investigadora encargada de reportar los hallazgos de nuestra base en el Ártico. Soy bióloga especialista en ecología y biología acuática, líder del laboratorio de investigación desde hace 8 meses, y a cargo de un equipo de profesionales altamente capacitados según me indicaron en el reporte de ingreso, sobre esto aún albergo mis dudas.",
-    sequence: [
-      {
-        path: "randomCode.png",
-        position: 20,
-      },
-      {
-        path: "stationsList.png",
-        position: 30,
-      },
-    ],
+    title: "Presentación Ryan Black a operador de la H.C.P.",
+    type: "image",
+    body: "Saludos operador, me presento ante usted como jefe del equipo de investigación de la base submarina. Mi nombre es Ryan Black, Almirante Superior Décimo Segundo de la Marina de Atlantis, donde tuve el honor de pertenecer durante 23 años, 2 meses y 14 días. Recibí el cargo de jefe de investigación hace 30 días, sin embargo estoy al tanto de todos los avances y novedades de los investigadores. Constantemente se le enviarán informes con la respectiva actualización de las investigaciones en curso. ",
+    imagePath: "sateliteFinished.gif",
+
+    // sequence: [
+    //   {
+    //     path: "randomCode.png",
+    //     position: 20,
+    //   },
+    //   {
+    //     path: "stationsList.png",
+    //     position: 30,
+    //   },
+    // ],
     // actions: [
     //   {
     //     name: "Enviar ropa sucia",

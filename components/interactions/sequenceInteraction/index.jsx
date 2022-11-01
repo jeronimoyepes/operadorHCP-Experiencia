@@ -24,7 +24,7 @@ export default function SequenceInteraction({ sequence }) {
     }
   }, [sequence]);
   return (
-    <div>
+    <div className={styles.container}>
       <img src={currenteFrame?.path} alt="" />
     </div>
   );

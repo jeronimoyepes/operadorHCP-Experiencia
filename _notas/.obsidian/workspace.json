@@ -61,7 +61,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md",
+                "file": "Bases/1. Base Ártico.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "35a6d15dd057916b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODOs.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -138,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md",
+                "file": "TODOs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,17 +168,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "0b2c7c6414f27c07",
+  "active": "35a6d15dd057916b",
   "lastOpenFiles": [
-    "Controles.md",
-    "Bases/Interacciones/Submarina/8. Mantenimiento de los equipos de buceo.md",
-    "Bases/Interacciones/Lunar/1. Llegada de los nuevos suministros.md",
     "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
+    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
+    "Bases/1. Base Ártico.md",
     "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md",
-    "Bases/Interacciones/Submarina/6. Una gotera.md",
-    "Bases/Interacciones/Submarina/7. Mantenimiento de los equipos de buceo.md",
-    "Bases/Interacciones/Submarina/5. Instrumentos fallando porque está en el triángulo de las bermudas.md",
-    "Bases/Interacciones/Submarina/4. Fisura en el fondo marino.md",
-    "Bases/Interacciones/Submarina/3. Calamar gigante.md"
+    "Bases/3. Base Lunar.md",
+    "Bases/2. Base submarina.md",
+    "TODOs.md",
+    "Bases/Interacciones/Submarina/3. Calamar gigante.md",
+    "Bases/Interacciones/Submarina/2. Restos de submarinos nucleares.md",
+    "Bases/Interacciones/Ártico/5. Registros de temperaturas.md"
   ]
 }

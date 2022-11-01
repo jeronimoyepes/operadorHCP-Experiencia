@@ -1,33 +1,33 @@
 const lunarInteractions = [
   {
-    title: "Lunar",
+    title: "Presentación Luther Eines Jr. a operador de la H.C.P. ",
     type: "text",
-    body: "Hola operador, mi nombre es Elizabeth Dijkstra y seré la investigadora encargada de reportar los hallazgos de nuestra base en el Ártico. Soy bióloga especialista en ecología y biología acuática, líder del laboratorio de investigación desde hace 8 meses, y a cargo de un equipo de profesionales altamente capacitados según me indicaron en el reporte de ingreso, sobre esto aún albergo mis dudas.",
-    image: "randomCode.png",
-    sequence: [
-      {
-        path: "randomCode.png",
-        position: 20,
-      },
-      {
-        path: "stationsList.png",
-        position: 30,
-      },
-    ],
-    // actions: [
+    body: "!Hola qué tal! soy Luther Eines Jr. el director de la base lunar pero puedes referirte a mí como Luther. Aunque acabo de empezar en este cargo, Eines Padre me ha preparado durante 20 años para esto. Soy ingeniero aeronáutico y astrónomo recién graduado, no pienses mal de mí,  Eines Padre se encargó de guiar mi proceso académico y me gradué con honores de la Universidad de Oxferrari. Hoy conoceré al equipo de la base, sin embargo el Eines Padre me mencionó que no hay muchos investigadores que valgan la pena. ¿Ya mencioné que Eines Padre es el director del cuartel general?",
+    // image: "instructionsConsole.gif",
+    // sequence: [
     //   {
-    //     name: "Enviar ropa sucia",
-    //     response: "Ropa sucia enviada"
+    //     path: "randomCode.png",
+    //     position: 20,
     //   },
     //   {
-    //     name: "Despedir",
-    //     response: "Me estoy despidiendo"
-    //   },
-    //   {
-    //     name: "Saludar2",
-    //     response: "Te saludo por segunda vez"
+    //     path: "stationsList.png",
+    //     position: 30,
     //   },
     // ],
+    actions: [
+      {
+        name: "Conectar",
+        response: "Conectado"
+      },
+      {
+        name: "Desconectar",
+        response: "Desconectado"
+      },
+      {
+        name: "Encender",
+        response: "Encendido"
+      },
+    ],
   }
 ];
 

@@ -1,49 +1,49 @@
 @import "./styles/general.scss";
 
-
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .label {
-    text-align: center;
-    width: 110px;
-    margin-right: 30px;
-    @include textGlow1($color-whey-opacity);
-    img {
-        margin-bottom: 10px;
-    }
+  text-align: center;
+  width: 110px;
+  margin-right: 30px;
+  @include textGlow1($color-whey-opacity);
+  img {
+    margin-bottom: 10px;
+  }
 }
 
 .line {
-    padding: 20px;
-    margin: 20px 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 20px;
-    border-top: $border-general;
-    border-bottom: $border-general;
-    background: url("../../public/timelineLineBG.png");
-    // background-color: $color-opacity-background;
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: $border-general;
+  border-bottom: $border-general;
+  background: url("../../public/timelineLineBG.png");
+  // background-color: $color-opacity-background;
 }
 
 .momment {
-    width: 140px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    .interactionIcon{
-        max-width: 120px;
-        max-height: 120px;
-    }
+  width: 120px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  .interactionIcon {
+    max-width: 120px;
+    height: 110px;
+  }
 }
 
 .separator {
-    width: 50px;
-    &:last-child {
-        display: none;
-    }
+  width: 50px;
+  opacity: 0.4;
+  &:last-child {
+    display: none;
+  }
 }
