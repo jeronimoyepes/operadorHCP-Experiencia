@@ -1,1 +1,1 @@
-export const durationMinutes = 10
+export const durationMinutes = 1

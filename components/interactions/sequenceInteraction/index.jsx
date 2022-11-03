@@ -11,7 +11,6 @@ export default function SequenceInteraction({ sequence }) {
       const key = e.key;
       sequence.map((frame) => {
         if (frame.position == keystrokes.potentiometer[key]) {
-          console.log(frame.position);
           setCurrenteFrame(frame);
         }
       });
