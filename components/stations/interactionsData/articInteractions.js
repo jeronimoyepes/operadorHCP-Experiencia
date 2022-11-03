@@ -18,11 +18,50 @@ const articInteractions = [
     body: "Esta mañana observamos en las imágenes satelitales que los glaciares se derriten a un ritmo acelerado en relación con el año pasado en el mismo periodo de tiempo, las proyecciones no son alentadoras, Venecia ahora es un romántico arrecife de coral y Holanda es un país aun más bajo.",
     imagePath: "",
     sequence: [
-      // TODO: pendiente
-      // {
-      //   path: "articMedia/1sequence/5.png",
-      //   position: 10,
-      // },
+      {
+        path: "articMedia/1sequence/1deicing_0.png",
+        position: 0,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_1.png",
+        position: 10,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_2.png",
+        position: 20,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_3.png",
+        position: 30,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_4.png",
+        position: 40,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_5.png",
+        position: 50,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_6.png",
+        position: 60,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_7.png",
+        position: 70,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_8.png",
+        position: 80,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_9.png",
+        position: 90,
+      },
+      {
+        path: "articMedia/1sequence/1deicing_10.png",
+        position: 100,
+      },
     ],
     actions: [],
   },
@@ -72,7 +111,7 @@ const articInteractions = [
     actions: [
       {
         name: "Felicitar",
-        response: "Merecidas felicitaiones por tan pronta y acertada respuesta",
+        response: "Merecidas felicitaciones por tan pronta y acertada respuesta.",
       },
     ],
   },
@@ -135,6 +174,22 @@ const articInteractions = [
         position: 100,
       },
     ],
+    actions: [],
+  },
+  {
+    title: "Llegada de uno de los grupos de exploración",
+    type: "image",
+    body: "Elizabeth Dijkstra a Operador. Hoy llegó el grupo #3 de exploración enviado a la zona BYOB, ubicada al oeste de la base. Consta de 4 investigadores, entre ellos un biólogo auxiliar, un físico, un geólogo y un médico entusiasta con algunos conocimientos básicos en ecología y experiencia tratando a pacientes en temperaturas extremas. Hoy están recuperándose de la expedición sin embargo entre los hallazgos generales, manifiestan haber encontrado alteración en la fauna y flora de la zona a causa de los cambios de temperatura y las crecientes de hasta 20 cm del nivel del mar.",
+    imagePath: "articMedia/5temperatures.png",
+    sequence: [],
+    actions: [],
+  },
+  {
+    title: "Llegada de uno de los grupos de exploración",
+    type: "text",
+    body: "Ayer tuve un sueño bastante particular, una criatura entró a las instalaciones de investigación, este ser era completamente diferente a cualquier cosa que haya visto o estudiado, era un parásito proveniente del espacio pero llevaba cientos de miles de años enterrado bajo la nieve. Este podía adoptar la forma de cualquier humano, por supuesto, no antes de matarlo. La mímesis era tan perfecta que era imposible distinguirlo a plena vista. Después de horas de tensión señalándonos los unos a los otros descubrimos su debilidad, el fuego... desafortunadamente justo cuando íbamos a controlar a la criatura me despertó    un investigador tratando de emular canticos celtas a la luz de la luna. Este es mi reporte final, Elizabeth Dijkstra, base de investigaciones del Ártico.",
+    imagePath: "articMedia/5temperatures.png",
+    sequence: [],
     actions: [],
   },
 ];
