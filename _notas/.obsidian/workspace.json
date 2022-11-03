@@ -44,42 +44,6 @@
             }
           },
           {
-            "id": "2024186dc7e55c40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Controles.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0b2c7c6414f27c07",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases/1. Base Ártico.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "35a6d15dd057916b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases/Interacciones/Lunar/1. Llegada de los nuevos suministros.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cbd455756beca6ed",
             "type": "leaf",
             "state": {
@@ -92,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -150,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bases/Interacciones/Lunar/1. Llegada de los nuevos suministros.md",
+                "file": "Bases/Interacciones/Submarina/8. Mantenimiento de los equipos de buceo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,17 +132,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "35a6d15dd057916b",
+  "active": "db496094d0c1ce1d",
   "lastOpenFiles": [
-    "Bases/Interacciones/Lunar/0. Presentación Luther Eines Jr..md",
-    "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
-    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md",
-    "Bases/Interacciones/Ártico/8. Sueño de que una criatura suplantaba uno de sus compañeros de la base.md",
-    "Bases/Interacciones/Ártico/7. Llegada de uno de los grupos de exploración.md",
-    "Bases/Interacciones/Ártico/6. Video de la aurora boreal de la noche anterior.md",
-    "Bases/Interacciones/Ártico/5. Registros de temperaturas.md",
-    "Bases/Interacciones/Tipos/Texto.md",
+    "Bases/Interacciones/Lunar/8. Tormentas solares.md",
+    "Bases/Interacciones/Lunar/7. Visitas de extraterrestres.md",
+    "Bases/Interacciones/Lunar/6. Fotografías de la tierra.md",
+    "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
+    "Bases/Interacciones/Lunar/5. Sitios de excavación.md",
+    "attachments/Earth from the moon 1.png",
+    "Bases/Interacciones/Lunar/3. Registro mineral de rocas lunares.md",
     "Bases/Interacciones/Ártico/4. Problemas con la calefacción.md",
-    "Bases/Interacciones/Ártico/3. Fósiles descubiertos por el descongelamiento (Virus prehistórico).md"
+    "Bases/Interacciones/Ártico/5. Registros de temperaturas.md",
+    "Bases/Interacciones/Ártico/0. Presentación del investigador en el puesto de reportes.md"
   ]
 }

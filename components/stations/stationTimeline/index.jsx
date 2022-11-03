@@ -26,6 +26,7 @@ export default function StationTimeline({ interactionData }) {
         context.timeElapsed < interactionTimeLimit &&
         context.timeElapsed >= interactionTimeLimit - interactionTime
       ) {
+        console.log(interaction)
         return setCurrentInteractionData(interaction);
       }
     });
