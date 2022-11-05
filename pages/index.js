@@ -5,19 +5,30 @@ import { Layout } from "../components/layout/Layout";
 import styles from "./index.module.scss";
 import BorderContainer from "components/borderContainer/BorderContainer";
 
+const data = {
+  user_id: "hash",
+  date: "date",
+  page: "index",
+  baseInteraction_id: "string",
+  keystroke: "string",
+};
+
 const fetchUser = async () => {
   const response = await fetch(`/api/hello`, {
-    method: "GET",
+    body: JSON.stringify(data),
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
   });
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.status}`);
+    return;
+    // throw new Error(`Error: ${response.status}`);
   }
 
   const user = await response.json();
+  console.log(user);
   return user;
 };
 
@@ -33,6 +44,7 @@ export default function Home() {
     },
   ];
   useEffect(() => {
+    fetchUser();
     function handleKeyDown(e) {
       const key = e.key;
       if (key == "a") {

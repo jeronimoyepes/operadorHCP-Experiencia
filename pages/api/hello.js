@@ -1,5 +1,11 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-export default function handler(req, res) {
-  res.status(200).json({ name: "John Doe" });
+import { writeToFirebase } from "./firebaseCofig";
+
+export default function captureData(req, res) {
+  writeToFirebase(req.body).then(response => {
+    res.status(201).json({ name: "John Doe" });
+  }).catch(e => {
+    console.log(e)
+  })
 }
