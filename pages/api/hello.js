@@ -3,9 +3,10 @@
 import { writeToFirebase } from "./firebaseCofig";
 
 export default function captureData(req, res) {
-  writeToFirebase(req.body).then(response => {
-    res.status(201).json({ name: "John Doe" });
-  }).catch(e => {
-    console.log(e)
-  })
+  // writeToFirebase(req.body).then(response => {
+  //   res.status(201).json({ name: "John Doe" });
+  // }).catch(e => {
+  //   console.log(e)
+  // })
+  return res.status(201).json({ name: "John Doe" });
 }

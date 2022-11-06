@@ -5,7 +5,7 @@ import styles from "./sateliteConection.module.scss";
 import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import { Layout } from "@/components/layout/Layout";
-import { Router } from "next/router";
+import Router from "next/router";
 
 export default function SateliteConection() {
   const asideGeneralData = {
@@ -18,7 +18,7 @@ export default function SateliteConection() {
 
   useEffect(() => {
     setInterval(() => {
-      window.location.assign("/mainExperience")
+      Router.push("/mainExperience")
     }, 8000);
   }, [])
   

@@ -5,7 +5,6 @@ import { articInteractions } from "@/components/stations/interactionsData/articI
 import { lunarInteractions } from "@/components/stations/interactionsData/lunarInteractions";
 import { submarineInteractions } from "@/components/stations/interactionsData/submarineInteractions";
 import { durationMinutes } from "@/helpers/experienceDuration";
-import { useState } from "react";
 
 export default function FinalReport() {
 
@@ -28,7 +27,7 @@ export default function FinalReport() {
   let minutesAmount = [];
 
   for (let i = 0; i <= durationMinutes; i++) {
-    minutesAmount.push(<span>{i}m</span>)
+    minutesAmount.push(<span key={i}>{i}m</span>)
   }
 
   return (

@@ -8,9 +8,9 @@ export function TimeLine({ timeLineData, stationData }) {
         <p>{stationData.name}</p>
       </div>
       <div className={styles.line}>
-        {timeLineData.map((momment) => {
+        {timeLineData.map((momment, index) => {
           return (
-            <>
+            <div key={index}>
               <div className={styles.momment}>
                 <img
                   className={styles.interactionIcon}
@@ -23,7 +23,7 @@ export function TimeLine({ timeLineData, stationData }) {
                 src="momentSeparator.svg"
                 alt=""
               />
-            </>
+            </div>
           );
         })}
       </div>

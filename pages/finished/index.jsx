@@ -4,6 +4,7 @@ import BorderContainer from "@/components/borderContainer/BorderContainer";
 import { Layout } from "@/components/layout/Layout";
 
 import styles from "./finished.module.scss";
+import { Router } from "next/router";
 
 export default function Finished() {
   const asideGeneralData = {
@@ -16,7 +17,7 @@ export default function Finished() {
 
   useEffect(() => {
     setInterval(() => {
-      window.location.assign("/finalReport");
+      Router.push("/finalReport");
     }, 4000);
   }, []);
 

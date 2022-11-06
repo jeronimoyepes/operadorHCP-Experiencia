@@ -29,7 +29,8 @@ export default function InstructionRenderer({
         // Capturar si es la última pantalla de las instrucciones
         if (pages.next == 6) {
           window.removeEventListener("keyup", handleKeyInstructions);
-          return window.location.assign("/sateliteConection");
+          // return window.location.assign("/sateliteConection");
+          return Router.push("/sateliteConection");
         } else {
           Router.push(`./page${pages.next}`);
         }

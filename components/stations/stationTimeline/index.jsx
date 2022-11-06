@@ -1,13 +1,13 @@
 import DecisionsInteraction from "../../interactions/decisionsInteraction";
 import styles from "./stationTimeline.module.scss";
 import { useContext, useEffect, useState } from "react";
-import { Context } from "pages/mainExperience";
+import { TimerContext } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
 import SequenceInteraction from "@/components/interactions/sequenceInteraction";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 
 export default function StationTimeline({ interactionData }) {
-  const context = useContext(Context);
+  const context = useContext(TimerContext);
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 

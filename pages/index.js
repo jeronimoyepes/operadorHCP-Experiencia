@@ -4,6 +4,8 @@ import { NumberedBox } from "components/numberedBox/NumberedBox";
 import { Layout } from "../components/layout/Layout";
 import styles from "./index.module.scss";
 import BorderContainer from "components/borderContainer/BorderContainer";
+import senDataToAPI from "@/helpers/senDataToAPI";
+import Router from "next/router";
 
 const data = {
   user_id: "hash",
@@ -44,12 +46,13 @@ export default function Home() {
     },
   ];
   useEffect(() => {
-    fetchUser();
+    // senDataToAPI()
+    // fetchUser();
     function handleKeyDown(e) {
       const key = e.key;
       if (key == "a") {
         document.removeEventListener("keyup", handleKeyDown);
-        return location.replace("/instructions/page1");
+        return Router.push("/instructions/page1");
       }
     }
     document.addEventListener("keyup", handleKeyDown);

@@ -5,8 +5,9 @@ import styles from "./mainExperience.module.scss";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import keystrokes from "@/helpers/keystrokesValues";
 import {durationMinutes} from "@/helpers/experienceDuration"
+import Router from "next/router";
 
-export const Context = createContext();
+export const TimerContext = createContext();
 
 export default function MainExperience() {
   const [currentStation, setCurrentStation] = useState();
@@ -21,7 +22,7 @@ export default function MainExperience() {
   function updateCounter() {
     experienceTimeLeft--;
     if (experienceTimeLeft == 0) {
-      return window.location.assign("/finalReport");
+      return Router.push("/finalReport");
     }
 
     let minutes = Math.floor(experienceTimeLeft / 60);
@@ -32,6 +33,7 @@ export default function MainExperience() {
     );
     setTimeLeft(experienceTotalDuration - experienceTimeLeft);
   }
+
   // Temporizador de la experiencia\
 
   useEffect(() => {
@@ -57,7 +59,7 @@ export default function MainExperience() {
   }, []);
 
   return (
-    <Context.Provider value={{ timeElapsed, experienceTotalDuration }}>
+    <TimerContext.Provider value={{ timeElapsed, experienceTotalDuration }}>
       <Layout title={"Supervisión"}>
         {currentStation ? (
           <StationsRenderer
@@ -82,6 +84,6 @@ export default function MainExperience() {
           </>
         )}
       </Layout>
-    </Context.Provider>
+    </TimerContext.Provider>
   );
 }
