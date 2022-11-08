@@ -10,19 +10,17 @@ export function TimeLine({ timeLineData, stationData }) {
       <div className={styles.line}>
         {timeLineData.map((momment, index) => {
           return (
-            <div key={index}>
-              <div className={styles.momment}>
-                <img
-                  className={styles.interactionIcon}
-                  src={`reportType-${momment.type}.svg`}
-                  alt=""
-                />
-              </div>
+            <div key={index} className={styles.momment}>
               <img
+                className={styles.interactionIcon}
+                src={`reportType-${momment.type}.svg`}
+                alt=""
+              />
+              {/* <img
                 className={styles.separator}
                 src="momentSeparator.svg"
                 alt=""
-              />
+              /> */}
             </div>
           );
         })}

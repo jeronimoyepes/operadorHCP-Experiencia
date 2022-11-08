@@ -5,13 +5,15 @@ import { TimerContext } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
 import SequenceInteraction from "@/components/interactions/sequenceInteraction";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
+import { UserContext } from "pages/_app";
 
-export default function StationTimeline({ interactionData }) {
+export default function StationTimeline({ interactionData, currentStation }) {
   const context = useContext(TimerContext);
+  const { sendDataToAPI } = useContext(UserContext);
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 
-  const interactionTime = getTimeForEachInteraction(
+  const TimeForEachInteraction = getTimeForEachInteraction(
     context.experienceTotalDuration,
     interactionData.length
   );
@@ -20,17 +22,24 @@ export default function StationTimeline({ interactionData }) {
     // Retornar la interacción cuyo rango de tiempo contenga el tiempo transcurrido de la experiencia
     interactionData.map((interaction) => {
       const interactionTimeLimit =
-        (interactionData.indexOf(interaction) + 1) * interactionTime;
+        (interactionData.indexOf(interaction) + 1) * TimeForEachInteraction;
       // Si el tiempo transcurrido está dentro del rango de la interacción
       if (
         context.timeElapsed < interactionTimeLimit &&
-        context.timeElapsed >= interactionTimeLimit - interactionTime
+        context.timeElapsed >= interactionTimeLimit - TimeForEachInteraction
       ) {
-        console.log(interaction)
         return setCurrentInteractionData(interaction);
       }
     });
   }, [context.timeElapsed, interactionData]);
+
+  useEffect(() => {
+    currentInteractionData &&
+      sendDataToAPI({
+        page: `station-${currentStation.id}`,
+        baseInteraction_id: currentInteractionData.id,
+      });
+  }, [currentInteractionData]);
 
   return (
     <div className={styles.container}>
@@ -58,14 +67,16 @@ export default function StationTimeline({ interactionData }) {
               {currentInteractionData.type == "sequence" && (
                 <BorderContainer>
                   <SequenceInteraction
-                    sequence={currentInteractionData.sequence}
+                    currentInteractionData={currentInteractionData}
+                    currentStation={currentStation}
                   />
                 </BorderContainer>
               )}
               {currentInteractionData.type == "signal" && (
                 <BorderContainer>
                   <SequenceInteraction
-                    sequence={currentInteractionData.sequence}
+                    currentInteractionData={currentInteractionData}
+                    currentStation={currentStation}
                   />
                 </BorderContainer>
               )}
@@ -73,6 +84,7 @@ export default function StationTimeline({ interactionData }) {
             {currentInteractionData.actions?.length > 0 && (
               <DecisionsInteraction
                 currentInteractionData={currentInteractionData}
+                currentStation={currentStation}
               />
             )}
           </div>

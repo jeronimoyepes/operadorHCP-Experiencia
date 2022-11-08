@@ -24,15 +24,6 @@ const Page5 = () => {
       image: "/button-2.svg",
     },
   ];
-  useEffect(() => {
-    function handleKeyEndInstructions(e) {
-      const key = e.key;
-      if (key == keystrokesValues.button0) {
-        console.log("Agradecer a la HCP")
-      }
-    }
-    document.addEventListener("keyup", handleKeyEndInstructions);
-  }, []);
   return (
     <Layout title={"Instructions"}>
       <InstructionRenderer

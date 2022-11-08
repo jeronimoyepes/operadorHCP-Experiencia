@@ -22,7 +22,7 @@ export default function MainExperience() {
   function updateCounter() {
     experienceTimeLeft--;
     if (experienceTimeLeft == 0) {
-      return Router.push("/finalReport");
+      return Router.push("/finishedConection");
     }
 
     let minutes = Math.floor(experienceTimeLeft / 60);
@@ -33,7 +33,6 @@ export default function MainExperience() {
     );
     setTimeLeft(experienceTotalDuration - experienceTimeLeft);
   }
-
   // Temporizador de la experiencia\
 
   useEffect(() => {

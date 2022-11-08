@@ -1,16 +1,23 @@
 import StationTimeline from "../stationTimeline";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styles from "./stationsRenderer.module.scss";
 
 // Datos de interacción de cada estación
 import { articInteractions } from "../interactionsData/articInteractions";
 import { submarineInteractions } from "../interactionsData/submarineInteractions";
 import { lunarInteractions } from "../interactionsData/lunarInteractions";  
+import { UserContext } from "pages/_app";
 
 export default function StationsRenderer({ experienceTimer, currentStation }) {
   const [interactionData, setInteractionData] = useState();
 
+  const { sendDataToAPI } = useContext(UserContext);
+
+
   useEffect(() => {
+    sendDataToAPI({
+      page: `station-${currentStation.id}`,
+    });
     switch (currentStation.id) {
       case "artic":
         return setInteractionData(articInteractions);
@@ -42,7 +49,7 @@ export default function StationsRenderer({ experienceTimer, currentStation }) {
       </div>
       <div className={styles.renderStation}>
         {interactionData && (
-          <StationTimeline interactionData={interactionData} />
+          <StationTimeline interactionData={interactionData} currentStation={currentStation} />
         )}
       </div>
     </div>

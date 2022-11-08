@@ -176,7 +176,7 @@ const lunarInteractions = [
   {
     id: 17,
     title: "Fotografías de la tierra",
-    type: "sequence",
+    type: "text",
     body: "Informo que el investigador encargado del monitoreo diario de radiación, partículas y posibles amenazas externas para la base, notó incrementos alarmantes en las erupciones solares de los últimos días, por eso prevemos que para en 27 días tendremos tormentas solares entre nocivas y mortales para cualquier instalación que no cuente con atmósfera protectora. Para ello, es de gran orgullo, reconocer que Eines Padre me capacitó perfectamente para evitar las amenazas de este clima espacial alterado. Estoy un poco preocupado por nuestros cultivos hidropónicos, es posible que las pequeñas dosis de radiación hayan interferido con mi cultivo de Coca Cola. Reforzaré personalmente este espacio. Enviaré un informe cuando termine el período crítico.",
     imagePath: "",
     sequence: [

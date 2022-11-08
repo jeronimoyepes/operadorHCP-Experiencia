@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import styles from "./sateliteConection.module.scss";
 
@@ -6,22 +6,28 @@ import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import { Layout } from "@/components/layout/Layout";
 import Router from "next/router";
+import { UserContext } from "pages/_app";
 
 export default function SateliteConection() {
+  const { sendDataToAPI } = useContext(UserContext);
+
   const asideGeneralData = {
     // h1: "",
     // h2: "",
     pageDescription: "Esperando sincronización con satélite",
     // date: "04/10/22",
-    img: "randomCode.png"
+    img: "randomCode.png",
   };
 
   useEffect(() => {
     setInterval(() => {
-      Router.push("/mainExperience")
+      Router.push("/mainExperience");
     }, 8000);
-  }, [])
-  
+    sendDataToAPI({
+      page: "sateliteConection",
+    });
+  }, []);
+
   return (
     <Layout title={"Conectando..."}>
       <div className={styles.container}>

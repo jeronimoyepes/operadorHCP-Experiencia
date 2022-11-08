@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Router from "next/router";
 
 import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
-import { Layout } from "@/components/layout/Layout";
 
 import styles from "./instructionRenderer.module.scss";
 import ControlsPannel from "../controlsPannel/ControlsPannel";
 import keystrokesValues from "@/helpers/keystrokesValues";
+import { UserContext } from "pages/_app";
 
 export default function InstructionRenderer({
   children,
@@ -15,6 +15,9 @@ export default function InstructionRenderer({
   pageCounter,
   controlsData,
 }) {
+
+  const { sendDataToAPI } = useContext(UserContext);
+
   const asideGeneralData = {
     h1: "IC-HCP",
     h2: "Iniciativa científica",
@@ -23,6 +26,11 @@ export default function InstructionRenderer({
   };
 
   useEffect(() => {
+
+    sendDataToAPI({
+      page: "instructions-" + children._owner.elementType.name,
+    });
+  
     function handleKeyInstructions(e) {
       const key = e.key;
       if (key == keystrokesValues.button0) {

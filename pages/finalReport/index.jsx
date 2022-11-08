@@ -5,8 +5,14 @@ import { articInteractions } from "@/components/stations/interactionsData/articI
 import { lunarInteractions } from "@/components/stations/interactionsData/lunarInteractions";
 import { submarineInteractions } from "@/components/stations/interactionsData/submarineInteractions";
 import { durationMinutes } from "@/helpers/experienceDuration";
+import keystrokes from "@/helpers/keystrokesValues";
+import { useContext, useEffect } from "react";
+import { UserContext } from "pages/_app";
+
 
 export default function FinalReport() {
+
+  const { sendDataToAPI } = useContext(UserContext);
 
   const stationData = {
     artic: {
@@ -22,13 +28,27 @@ export default function FinalReport() {
       id: "lunar",
     },
   };
-
-
+  // Tuve que hacer eso porque no puedo poner un for loop en el html :I
   let minutesAmount = [];
-
   for (let i = 0; i <= durationMinutes; i++) {
     minutesAmount.push(<span key={i}>{i}m</span>)
   }
+
+  useEffect(() => {
+    function handleKeyFinish(e) {
+      const key = e.key;
+      if (key == keystrokes.button2) {
+        window.removeEventListener("keyup", handleKeyFinish);
+        window.location.assign("/") // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
+      }
+    }
+    window.addEventListener("keyup", handleKeyFinish);
+
+    sendDataToAPI({
+      page: "finalReport",
+    });
+  }, [])
+  
 
   return (
     <Layout title={"Reporte"}>

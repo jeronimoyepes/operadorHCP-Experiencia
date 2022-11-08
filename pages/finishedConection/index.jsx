@@ -1,12 +1,17 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import BorderContainer from "@/components/borderContainer/BorderContainer";
 import { Layout } from "@/components/layout/Layout";
+import { UserContext } from "pages/_app";
+
 
 import styles from "./finished.module.scss";
-import { Router } from "next/router";
+import Router from "next/router";
 
 export default function Finished() {
+
+  const { sendDataToAPI } = useContext(UserContext);
+
   const asideGeneralData = {
     // h1: "",
     // h2: "",
@@ -19,6 +24,9 @@ export default function Finished() {
     setInterval(() => {
       Router.push("/finalReport");
     }, 4000);
+    sendDataToAPI({
+      page: "finishedConection",
+    });
   }, []);
 
   return (

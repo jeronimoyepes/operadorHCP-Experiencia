@@ -25,7 +25,6 @@
   border-top: $border-general;
   border-bottom: $border-general;
   background: url("../../public/timelineLineBG.png");
-  // background-color: $color-opacity-background;
 }
 
 .momment {
@@ -37,13 +36,16 @@
   .interactionIcon {
     max-width: 120px;
     height: 110px;
+  }h
+  .separator {
+    width: 50px;
+    margin-right: 10px;
+    opacity: 0.4;
+  }
+  &:last-child {
+    .separator {
+      display: none;
+    }
   }
 }
 
-.separator {
-  width: 50px;
-  opacity: 0.4;
-  &:last-child {
-    display: none;
-  }
-}

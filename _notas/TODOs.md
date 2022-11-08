@@ -14,9 +14,9 @@
 	- [x] Iniciar la base de datos de Firebase
 		- [x] Conectarla al proyecto
 	- [x] Crear la ruta de captura de datos
-	- [ ] Crear ruta de envío de reporte de operados
+	- [x] Crear ruta de envío de reporte de operados
 	- [ ] Ruta para descargar toda la DB (Excel)
-- [ ] Capturar los datos de usuario en cada pantalla
+- [x] Capturar los datos de usuario en cada pantalla
 - [ ] Pantalla de inicio
 - [ ] Terminar la conexión del puerto Jack
 - [ ] Trivia al final de la experiencia

@@ -1,34 +1,51 @@
 import keystrokes from "@/helpers/keystrokesValues";
-import { useEffect, useState } from "react";
+import { UserContext } from "pages/_app";
+import { useContext, useEffect, useState } from "react";
 import ControlButton from "../../controlButton";
 import styles from "./decisionsInteraction.module.scss";
 
-export default function DecisionsInteraction({ currentInteractionData }) {
+export default function DecisionsInteraction({
+  currentInteractionData,
+  currentStation,
+}) {
+  const { sendDataToAPI } = useContext(UserContext);
+
+
   const [decisionTaken, setDecisionTaken] = useState(null);
 
   useEffect(() => {
     function handleKeyDecision(e) {
       const key = e.key;
       if (key == keystrokes.button0) {
-        setDecisionTakenOnButtonClic(0);
+        setDecisionTakenOnButtonClic(0, key);
       }
       if (key == keystrokes.button1) {
-        setDecisionTakenOnButtonClic(1);
+        setDecisionTakenOnButtonClic(1, key);
       }
       if (key == keystrokes.button2) {
-        setDecisionTakenOnButtonClic(2);
+        setDecisionTakenOnButtonClic(2, key);
       }
     }
     window.addEventListener("keyup", handleKeyDecision);
 
-    function setDecisionTakenOnButtonClic(int) {
-      if (currentInteractionData?.actions[int]?.response) {
-        setDecisionTaken(int);
+    function setDecisionTakenOnButtonClic(decisionNumber, keyPressed) {
+      if (currentInteractionData?.actions[decisionNumber]?.response) {
+        setDecisionTaken(decisionNumber);
+
+        sendDataToAPI({
+          page: `station-${currentStation.id}`,
+          baseInteraction_id: currentInteractionData.id,
+          keystroke: Object.keys(keystrokes).find(
+            (keyName) => keystrokes[keyName] === keyPressed
+          ),
+        });
+
         window.removeEventListener("keyup", handleKeyDecision);
       }
     }
 
     return () => {
+      setDecisionTaken(null);
       window.removeEventListener("keyup", handleKeyDecision);
     };
   }, [currentInteractionData]);

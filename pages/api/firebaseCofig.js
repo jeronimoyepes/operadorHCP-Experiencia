@@ -10,8 +10,6 @@ import {
   query,
 } from "firebase/firestore";
 
-console.log(process.env.FIREBASE_CREDENTIALS)
-
 const fireBaseCreds = JSON.parse(process.env.FIREBASE_CREDENTIALS)
 
 // Inicializar Firebase

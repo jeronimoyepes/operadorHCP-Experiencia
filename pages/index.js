@@ -1,40 +1,19 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import { NumberedBox } from "components/numberedBox/NumberedBox";
 import { Layout } from "../components/layout/Layout";
 import styles from "./index.module.scss";
 import BorderContainer from "components/borderContainer/BorderContainer";
-import senDataToAPI from "@/helpers/senDataToAPI";
 import Router from "next/router";
-
-const data = {
-  user_id: "hash",
-  date: "date",
-  page: "index",
-  baseInteraction_id: "string",
-  keystroke: "string",
-};
-
-const fetchUser = async () => {
-  const response = await fetch(`/api/hello`, {
-    body: JSON.stringify(data),
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-
-  if (!response.ok) {
-    return;
-    // throw new Error(`Error: ${response.status}`);
-  }
-
-  const user = await response.json();
-  console.log(user);
-  return user;
-};
+import { UserContext } from "./_app";
 
 export default function Home() {
+  const { sendDataToAPI } = useContext(UserContext);
+
+  sendDataToAPI({
+    page: "index",
+  });
+
   const numberedBoxData = [
     {
       number: 1,
@@ -45,9 +24,8 @@ export default function Home() {
       text: "Enciende la consola",
     },
   ];
+
   useEffect(() => {
-    // senDataToAPI()
-    // fetchUser();
     function handleKeyDown(e) {
       const key = e.key;
       if (key == "a") {
