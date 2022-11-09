@@ -26,14 +26,13 @@ function sendDataToAPI(dataToSend) {
     });
 
     if (!response.ok) {
-      return Error(`Error: ${response.status}`);
+      return console.log("error al enviar datos");
     }
 
     const user = await response.json();
 
     return user;
   };
-  return sendData();
 }
 
 function MyApp({ Component, pageProps }) {
