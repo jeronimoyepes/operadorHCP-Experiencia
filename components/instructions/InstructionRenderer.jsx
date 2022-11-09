@@ -22,7 +22,7 @@ export default function InstructionRenderer({
     h1: "IC-HCP",
     h2: "Iniciativa científica",
     pageDescription: "Lista de actividades del operador",
-    date: "04/10/22",
+    date: "28/09/1970",
   };
 
   useEffect(() => {
@@ -53,6 +53,10 @@ export default function InstructionRenderer({
       }
     }
     window.addEventListener("keyup", handleKeyInstructions);
+
+    return () => {
+      window.removeEventListener("keyup", handleKeyInstructions);
+    }
   }, []);
 
   return (
