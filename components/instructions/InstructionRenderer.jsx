@@ -28,7 +28,7 @@ export default function InstructionRenderer({
   useEffect(() => {
 
     sendDataToAPI({
-      page: "instructions-" + children._owner.elementType.name,
+      page: "instructions-" + children._owner.elementType.name, //Extrae el nombre de la página
     });
   
     function handleKeyInstructions(e) {
