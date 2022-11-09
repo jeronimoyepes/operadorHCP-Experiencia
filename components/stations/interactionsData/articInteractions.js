@@ -196,7 +196,7 @@ const articInteractions = [
     id: 8,
     title: "Un sueño extraño",
     type: "text",
-    body: "Ayer tuve un sueño bastante particular, una criatura invadió las instalaciones de investigación, este ser era completamente diferente a cualquier cosa que haya visto o estudiado, era un parásito proveniente del espacio pero llevaba cientos de miles de años enterrado bajo la nieve. Este podía adoptar la forma de cualquier humano, por supuesto, no antes de matarlo. La mímesis era tan perfecta que era imposible distinguirlo a plena vista. Después de horas de tensión señalándonos los unos a los otros descubrimos su debilidad, el fuego... desafortunadamente justo cuando íbamos a controlar a la criatura me despertó    un investigador tratando de emular canticos celtas a la luz de la luna. Este es mi reporte final, Elizabeth Dijkstra, base de investigaciones del Ártico.",
+    body: "Ayer tuve un sueño bastante particular, una criatura invadió las instalaciones de investigación, este ser era completamente diferente a cualquier cosa que haya visto o estudiado, era un parásito proveniente del espacio pero llevaba cientos de miles de años enterrado bajo la nieve. Este podía adoptar la forma de cualquier humano, por supuesto, no antes de matarlo. La mímesis era tan perfecta que era imposible distinguirlo a plena vista. Después de horas de tensión señalándonos los unos a los otros descubrimos su debilidad, el fuego... Desafortunadamente justo cuando íbamos a controlar a la criatura me despertó    un investigador tratando de emular canticos celtas a la luz de la luna. Este es mi reporte final, Elizabeth Dijkstra, base de investigaciones del Ártico.",
     imagePath: "articMedia/5temperatures.png",
     sequence: [],
     actions: [],
