@@ -10,10 +10,6 @@ import { UserContext } from "./_app";
 export default function Home() {
   const { sendDataToAPI } = useContext(UserContext);
 
-  sendDataToAPI({
-    page: "index",
-  });
-
   const numberedBoxData = [
     {
       number: 1,
@@ -26,6 +22,9 @@ export default function Home() {
   ];
 
   useEffect(() => {
+    sendDataToAPI({
+      page: "index",
+    });
     function handleKeyDown(e) {
       const key = e.key;
       if (key == "a") {

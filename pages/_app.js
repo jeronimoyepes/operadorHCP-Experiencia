@@ -33,6 +33,7 @@ function sendDataToAPI(dataToSend) {
 
     return user;
   };
+  sendData()
 }
 
 function MyApp({ Component, pageProps }) {
