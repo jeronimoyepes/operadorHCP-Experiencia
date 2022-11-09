@@ -26,7 +26,7 @@ function sendDataToAPI(dataToSend) {
     });
 
     if (!response.ok) {
-      return console.log("error al enviar datos");
+      return console.log("error al enviar datos", response.json());
     }
 
     const user = await response.json();

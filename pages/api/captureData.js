@@ -3,7 +3,7 @@
 import { writeToFirebase } from "./firebaseCofig";
 
 export default function captureData(req, res) {
-  writeToFirebase({... req.body, IP: req.headers}).then(response => {
+  writeToFirebase(req.body).then(response => {
     res.status(201).json({ msg: "Guardado correctamente"});
   }).catch(e => {
     res.status(400).json({ msg: "Guardado correctamente", e});
