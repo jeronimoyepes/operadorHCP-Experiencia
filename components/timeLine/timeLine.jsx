@@ -1,6 +1,7 @@
 import styles from "./timeLine.module.scss";
 
-export function TimeLine({ timeLineData, stationData }) {
+export function TimeLine({ timeLineData, stationData, viewedInteractions }) {
+
   return (
     <div className={styles.container}>
       <div className={styles.label}>
@@ -11,16 +12,19 @@ export function TimeLine({ timeLineData, stationData }) {
         {timeLineData.map((momment, index) => {
           return (
             <div key={index} className={styles.momment}>
-              <img
-                className={styles.interactionIcon}
-                src={`reportType-${momment.type}.svg`}
-                alt=""
-              />
-              {/* <img
-                className={styles.separator}
-                src="momentSeparator.svg"
-                alt=""
-              /> */}
+              <div
+                className={
+                  viewedInteractions.some(
+                    (interacion) => interacion.id == momment.id
+                  ) ? styles.viewed : null
+                }
+              >
+                <img
+                  className={styles.interactionIcon}
+                  src={`reportType-${momment.type}.svg`}
+                  alt=""
+                />
+              </div>
             </div>
           );
         })}

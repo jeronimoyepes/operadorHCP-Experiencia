@@ -39,6 +39,9 @@ export default function MainExperience() {
     setInterval(() => {
       updateCounter();
     }, 1000);
+    window.onbeforeunload = function () {
+      return "Prevenir refrescar la página";
+    };
   }, []);
 
   useEffect(() => {

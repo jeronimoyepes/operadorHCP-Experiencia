@@ -10,6 +10,9 @@ export default function sendDataToAPI(dataToSend) {
     date: Date.now(),
     totalExperienceDuration: durationMinutes * 60,
   };
+
+  console.log("ENVIANDO", allData) 
+  
   const sendData = async () => {
     const response = await fetch(`/api/captureData`, {
       body: JSON.stringify(allData),

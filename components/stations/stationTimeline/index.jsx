@@ -9,7 +9,7 @@ import { UserContext } from "pages/_app";
 
 export default function StationTimeline({ interactionData, currentStation }) {
   const context = useContext(TimerContext);
-  const { sendDataToAPI } = useContext(UserContext);
+  const { sendDataToAPI, viewedInteractions } = useContext(UserContext);
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 
@@ -34,12 +34,14 @@ export default function StationTimeline({ interactionData, currentStation }) {
   }, [context.timeElapsed, interactionData]);
 
   useEffect(() => {
-    currentInteractionData &&
+    if (currentInteractionData) {
       sendDataToAPI({
         page: `station-${currentStation.id}`,
         baseInteraction_id: currentInteractionData.id,
-        timeElapsed: context.timeElapsed
+        timeElapsed: context.timeElapsed,
       });
+      viewedInteractions.push(currentInteractionData.id);
+    }
   }, [currentInteractionData]);
 
   return (

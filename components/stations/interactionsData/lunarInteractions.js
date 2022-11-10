@@ -1,6 +1,6 @@
 const lunarInteractions = [
   {
-    id: 9,
+    id: 16,
     title: "Presentación Luther Eines Jr. a operador de la H.C.P. ",
     type: "text",
     body: "!Hola qué tal! soy Luther Eines Jr. el director de la base lunar pero puedes referirte a mí como Luther. Aunque acabo de empezar en este cargo, Eines Padre me ha preparado durante 20 años para esto. Soy ingeniero aeronáutico y astrónomo recién graduado, no pienses mal de mí,  Eines Padre se encargó de guiar mi proceso académico y me gradué con honores de la Universidad de Oxferrari. Hoy conoceré al equipo de la base, sin embargo el Eines Padre me mencionó que no hay muchos investigadores que valgan la pena. ¿Ya mencioné que Eines Padre es el director del cuartel general?",
@@ -14,7 +14,7 @@ const lunarInteractions = [
     ],
   },
   {
-    id: 10,
+    id: 17,
     title: "Llegada de los nuevos suministros",
     type: "image",
     body: "!Hola! Eines Padre me dijo que podía adecuar el laboratorio de investigación como mejor quisiera y me sorprendió lo rápido que llegaron los suministros para los proyectos que adelantaremos. Sin embargo, veo que faltan algunas cosas de vital importancia para la base. Pantuflas con pies de yeti talla 9 (2 unidades), talla 10 (2 unidades) y talla 12 (1 unidad). - Resaltadores que brillen en la oscuridad. - Tubos de ensayo con grabados de Odisea al espacio. - 5 cascos para bebidas (Dejo ejemplo)",
@@ -32,7 +32,7 @@ const lunarInteractions = [
     actions: [],
   },
   {
-    id: 12,
+    id: 18,
     title: "Registro mineral de rocas lunares",
     type: "sequence",
     body: "!Hola! Ayer salimos todos los tripulantes de la base para hacer una expedición corta de recolección de rocas lunares. Recolectamos entre 50 y 300 rocas de diferentes tipos, pero el experto geólogo, que tal vez debería llamarse lunático, dice que sólo hay 4 tipos diferentes. Dejo reporte gráfico de las piezas mencionadas:",
@@ -58,7 +58,7 @@ const lunarInteractions = [
     actions: [],
   },
   {
-    id: 13,
+    id: 19,
     title: "Fotografías del explorador lunar",
     type: "sequence",
     body: "!Hoy es mi cumpleaños! así que decidí hacer un paseo de exploración, me llevé a un tripulante para que hiciera unas cuantas fotos del trabajo que hago y enviárselas a papá. Seguro que las colgará en la pared para que las vean las visitas.",
@@ -88,7 +88,7 @@ const lunarInteractions = [
     actions: [],
   },
   {
-    id: 14,
+    id: 20,
     title: "Visitas de extraterrestres",
     type: "text",
     body: "Señor Operador hoy  me siento introspectivo, Eines Padre siempre ha dicho que es un desperdicio de tiempo y esfuerzo, pero siempre me he preguntado: ¿Qué hay en el lado oscuro de la luna? Tanto tiempo de investigación y aún nos asusta mirar allí. ¿Qué tal si existan otras formas de vida extraterrestres muy cerca de aquí?. ¿Cómo es posible que un universo tan basto y extenso, seamos la única forma de vida inteligente?. En ocasiones nuestros radares captan señales extrañas que aún no logramos descifrar, viendo el aparente vacío desde esta base, siento que hay algo que mis ojos no pueden captar que nuestros receptores sí. De vivir aquí afuera, seguramente tienen mejor tecnología para nuestros cultivos hidropónicos. Quizá revelen sus secretos para lograr que mi cultivo de Coca Cola germine. Decidí pedir que se lanzara una señal continua desde la base con la canción 'Fly me to the moon', tal vez nuestros vecinos extraterrestres la escuchen y se interesen en nosotros. ¿Crees que Dijkstra también pueda captarla en los radares de su base?",
@@ -98,7 +98,7 @@ const lunarInteractions = [
     actions: [],
   },
   {
-    id: 15,
+    id: 21,
     title: "Fotografías del explorador lunar",
     type: "signal",
     body: "Ayer el equipo de excavación escogió el en los que se iniciará la explotación de minerales lunares. Eines Padre dice que es uno de los proyectos más importantes de la base, ya que son minerales de altísimo costo en la Tierra, así que debo estar muy atento a cualquier novedad. He estado acompañando al equipo durante todo el día, enviando señal desde el sitio. Ojalá la doctora Dijkstra del ártico pudiera ver el gran trabajo que estoy haciendo, sólo digo...",
@@ -152,7 +152,7 @@ const lunarInteractions = [
     actions: [],
   },
   {
-    id: 16,
+    id: 22,
     title: "Fotografías de la tierra",
     type: "sequence",
     body: "Después de la excavación de minerales, noté que tengo gran talento para la fotografía, a veces me sorprendo de mis múltiples habilidades, así que decidí tomarme el día libre para apreciar la belleza de la Tierra desde aquí.",
@@ -174,7 +174,7 @@ const lunarInteractions = [
     actions: [],
   },
   {
-    id: 17,
+    id: 23,
     title: "Fotografías de la tierra",
     type: "text",
     body: "Informo que el investigador encargado del monitoreo diario de radiación, partículas y posibles amenazas externas para la base, notó incrementos alarmantes en las erupciones solares de los últimos días, por eso prevemos que para en 27 días tendremos tormentas solares entre nocivas y mortales para cualquier instalación que no cuente con atmósfera protectora. Para ello, es de gran orgullo, reconocer que Eines Padre me capacitó perfectamente para evitar las amenazas de este clima espacial alterado. Estoy un poco preocupado por nuestros cultivos hidropónicos, es posible que las pequeñas dosis de radiación hayan interferido con mi cultivo de Coca Cola. Reforzaré personalmente este espacio. Enviaré un informe cuando termine el período crítico.",
@@ -182,7 +182,6 @@ const lunarInteractions = [
     sequence: [
     ],
     actions: [
-      // TODO: crear preguntas
     ],
   },
 ];

@@ -1,4 +1,4 @@
-const articInteractions = [
+const interactionTemplate = [
   {
     title: "Presentación Elizabeth Dijkstra a operador de la H.C.P.",
     type: "text",
@@ -31,4 +31,4 @@ const articInteractions = [
   },
 ];
 
-export { articInteractions };
+export { interactionTemplate };

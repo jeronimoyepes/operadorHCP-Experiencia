@@ -5,15 +5,12 @@ import sendDataToAPI from "@/helpers/sendDataToAPI";
 
 export const UserContext = createContext();
 
+let viewedInteractions = []
+
 function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    window.onbeforeunload = function () {
-      return "Prevenir refrescar la página";
-    };
-  }, []);
 
   return (
-    <UserContext.Provider value={{ sendDataToAPI }}>
+    <UserContext.Provider value={{ sendDataToAPI, viewedInteractions }}>
       <Component {...pageProps} />
     </UserContext.Provider>
   );

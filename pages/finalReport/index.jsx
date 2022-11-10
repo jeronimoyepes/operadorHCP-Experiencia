@@ -8,11 +8,10 @@ import { durationMinutes } from "@/helpers/experienceDuration";
 import keystrokes from "@/helpers/keystrokesValues";
 import { useContext, useEffect } from "react";
 import { UserContext } from "pages/_app";
-
+import ControlButton from "@/components/controlButton";
 
 export default function FinalReport() {
-
-  const { sendDataToAPI } = useContext(UserContext);
+  const { sendDataToAPI, viewedInteractions } = useContext(UserContext);
 
   const stationData = {
     artic: {
@@ -31,15 +30,15 @@ export default function FinalReport() {
   // Tuve que hacer eso porque no puedo poner un for loop en el html :I
   let minutesAmount = [];
   for (let i = 0; i <= durationMinutes; i++) {
-    minutesAmount.push(<span key={i}>{i}m</span>)
+    minutesAmount.push(<span key={i}>{i}m</span>);
   }
 
   useEffect(() => {
     function handleKeyFinish(e) {
       const key = e.key;
-      if (key == keystrokes.button2) {
+      if (key == keystrokes.button0) {
         window.removeEventListener("keyup", handleKeyFinish);
-        window.location.assign("/") // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
+        window.location.assign("/"); // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
       }
     }
     window.addEventListener("keyup", handleKeyFinish);
@@ -47,15 +46,21 @@ export default function FinalReport() {
     sendDataToAPI({
       page: "finalReport",
     });
-  }, [])
-  
+    return () => {
+      window.removeEventListener("keyup", handleKeyFinish);
+    }
+  }, []);
 
   return (
     <Layout title={"Reporte"}>
       <div className={styles.header}>
         <h2>Reporte de rendimiento</h2>
         <div>
-          <p>Gracias por tu valioso tiempo operador. HCP.</p>
+          <p>Gracias por tu valioso tiempo operador, a continuación verás resaltados los informes que capturaste durante la sincronización</p>
+          <ControlButton
+            action={{name: "Finalizar"}}
+            index={0}
+          ></ControlButton>
           <img src="warn-lines.svg" alt="" />
         </div>
       </div>
@@ -64,20 +69,25 @@ export default function FinalReport() {
         <TimeLine
           stationData={stationData.artic}
           timeLineData={articInteractions}
+          viewedInteractions={viewedInteractions}
         />
         <TimeLine
           stationData={stationData.submarine}
           timeLineData={submarineInteractions}
+          viewedInteractions={viewedInteractions}
         />
         <TimeLine
           stationData={stationData.lunar}
           timeLineData={lunarInteractions}
+          viewedInteractions={viewedInteractions}
         />
       </div>
       <div className={styles.minutesLabel}>
-        <div className={styles.minutes}>{minutesAmount.map(minute => {
-          return minute
-        })}</div>
+        <div className={styles.minutes}>
+          {minutesAmount.map((minute) => {
+            return minute;
+          })}
+        </div>
         <p>Tiempo en línea</p>
       </div>
     </Layout>

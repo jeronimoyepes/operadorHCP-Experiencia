@@ -16,19 +16,19 @@ const submarineInteractions = [
     imagePath: "",
     sequence: [
       {
-        path: "submarineMedia/2sequence/submarine_0",
+        path: "submarineMedia/2sequence/submarine_0.png",
         position: 20,
       },
       {
-        path: "submarineMedia/2sequence/submarine_1",
+        path: "submarineMedia/2sequence/submarine_1.png",
         position: 30,
       },
       {
-        path: "submarineMedia/2sequence/submarine_2",
+        path: "submarineMedia/2sequence/submarine_2.png",
         position: 50,
       },
       {
-        path: "submarineMedia/2sequence/submarine_3",
+        path: "submarineMedia/2sequence/submarine_3.png",
         position: 70,
       },
     ],
@@ -64,47 +64,47 @@ const submarineInteractions = [
     imagePath: "",
     sequence: [
       {
-        path: "submarineMedia/3sequence/squid_0",
+        path: "submarineMedia/3sequence/squid_0.png",
         position: 0,
       },
       {
-        path: "submarineMedia/3sequence/squid_1",
+        path: "submarineMedia/3sequence/squid_1.png",
         position: 10,
       },
       {
-        path: "submarineMedia/3sequence/squid_2",
+        path: "submarineMedia/3sequence/squid_2.png",
         position: 20,
       },
       {
-        path: "submarineMedia/3sequence/squid_3",
+        path: "submarineMedia/3sequence/squid_3.png",
         position: 30,
       },
       {
-        path: "submarineMedia/3sequence/squid_4",
+        path: "submarineMedia/3sequence/squid_4.png",
         position: 40,
       },
       {
-        path: "submarineMedia/3sequence/squid_5",
+        path: "submarineMedia/3sequence/squid_5.png",
         position: 50,
       },
       {
-        path: "submarineMedia/3sequence/squid_6",
+        path: "submarineMedia/3sequence/squid_6.png",
         position: 60,
       },
       {
-        path: "submarineMedia/3sequence/squid_7",
+        path: "submarineMedia/3sequence/squid_7.png",
         position: 70,
       },
       {
-        path: "submarineMedia/3sequence/squid_8",
+        path: "submarineMedia/3sequence/squid_8.png",
         position: 80,
       },
       {
-        path: "submarineMedia/3sequence/squid_9",
+        path: "submarineMedia/3sequence/squid_9.png",
         position: 90,
       },
       {
-        path: "submarineMedia/3sequence/squid_10",
+        path: "submarineMedia/3sequence/squid_10.png",
         position: 100,
       },
     ],
@@ -115,7 +115,7 @@ const submarineInteractions = [
     title: "Fisura en el fondo marino",
     type: "image",
     body: "El último hallazgo del radar a cargo del equipo de monitoreo #4 identificó una alteración en las placas tectónicas ubicadas a 32km de la base de investigación submarina. Al acercarse a la falla, el submarino de patrulla identificó lo que sería una fisura del lecho marino desde la cual se originaban cambios erráticos en la presión  del agua siguiendo un patrón nunca registrado, el equipo de monitoreo nos mantendrá informados.",
-    imagePath: "fisure.png",
+    imagePath: "submarineMedia/fisure.png",
     sequence: [],
     actions: [],
   },
