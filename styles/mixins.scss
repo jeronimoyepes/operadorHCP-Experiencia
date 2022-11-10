@@ -1,5 +1,13 @@
 $textGlowAnimSpeed: 700ms;
 
+@mixin transitionAll($speed) {
+  -webkit-transition: all $speed ease-in-out;
+  -moz-transition: all $speed ease-in-out;
+  -ms-transition: all $speed ease-in-out;
+  -o-transition: all $speed ease-in-out;
+  transition: all $speed ease-in-out;
+}
+
 @mixin textGlow1($color) {
   -webkit-animation: glow1 $textGlowAnimSpeed ease-in-out infinite alternate;
   -moz-animation: glow1 $textGlowAnimSpeed ease-in-out infinite alternate;

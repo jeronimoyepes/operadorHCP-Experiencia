@@ -1,0 +1,15 @@
+@import "./styles/general.scss";
+
+.container {
+    text-align: center;
+    margin-top: 40vh;
+    button {
+        @include transitionAll(200ms);
+        cursor: pointer;
+        padding: 5px;
+        &:hover {
+            margin-top: -5px;
+            padding: 10px 35px;
+        }
+    }
+}

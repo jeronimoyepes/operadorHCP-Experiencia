@@ -10,8 +10,8 @@ import {
   query,
 } from "firebase/firestore";
 
-const fireBaseCreds = JSON.parse(process.env.FIREBASE_CREDENTIALS)
-const FBcollection = process.env.FIREBASE_COLLECTION
+const fireBaseCreds = JSON.parse(process.env.FIREBASE_CREDENTIALS);
+const FBcollection = process.env.FIREBASE_COLLECTION;
 
 // Inicializar Firebase
 const app = initializeApp(fireBaseCreds);
@@ -26,4 +26,27 @@ const writeToFirebase = (json) => {
   return addDoc(dbCollection, json);
 };
 
-export { writeToFirebase };
+// Función para leer de Firebase en una fecha especifica y escribir csv
+const readFromFirebase = () => {
+  // Query es una función de firebase, recibe la coleción y los filtros. Crea un query para firebase
+  const readQuery = query(
+    collection(db, FBcollection),
+    where(user_id)
+  );
+
+  // getDocs recibe el objeto query
+  return getDocs(readQuery).then((doc) => {
+    // ALmacenar los documentos que recibimos de firebase
+    const collecionObject = doc.docs;
+
+    // Iniciar un array donde se almacenaran solo los datos de los documentos
+    const documents = [];
+
+    // Iterar sobre los documentos y agregar los datos de dichos documentos al nuevo array
+    collecionObject.forEach((element) => {
+      documents.push(element.data());
+    });
+  });
+};
+
+export { writeToFirebase, readFromFirebase };
