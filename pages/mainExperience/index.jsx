@@ -13,7 +13,7 @@ export default function MainExperience() {
   const [currentStation, setCurrentStation] = useState();
   const [timeElapsed, setTimeLeft] = useState();
 
-  // Temporizador de la experiencia
+  // Temporizador legible de la experiencia
   const [experienceTimer, setExperienceTimer] = useState(`00:${durationMinutes}:00`);
 
   const experienceTotalDuration = durationMinutes * 60;
@@ -33,7 +33,7 @@ export default function MainExperience() {
     );
     setTimeLeft(experienceTotalDuration - experienceTimeLeft);
   }
-  // Temporizador de la experiencia\
+  // Temporizador legible de la experiencia\
 
   useEffect(() => {
     setInterval(() => {

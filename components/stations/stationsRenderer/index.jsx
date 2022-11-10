@@ -7,16 +7,20 @@ import { articInteractions } from "../interactionsData/articInteractions";
 import { submarineInteractions } from "../interactionsData/submarineInteractions";
 import { lunarInteractions } from "../interactionsData/lunarInteractions";  
 import { UserContext } from "pages/_app";
+import { TimerContext } from "pages/mainExperience";
 
 export default function StationsRenderer({ experienceTimer, currentStation }) {
   const [interactionData, setInteractionData] = useState();
 
   const { sendDataToAPI } = useContext(UserContext);
+  const context = useContext(TimerContext);
+
 
 
   useEffect(() => {
     sendDataToAPI({
       page: `station-${currentStation.id}`,
+      timeElapsed: context.timeElapsed
     });
     switch (currentStation.id) {
       case "artic":

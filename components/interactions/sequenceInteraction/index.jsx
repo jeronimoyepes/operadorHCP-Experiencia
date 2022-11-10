@@ -1,4 +1,5 @@
 import keystrokes from "@/helpers/keystrokesValues";
+import { TimerContext } from "pages/mainExperience";
 import { UserContext } from "pages/_app";
 import { useContext, useEffect, useState } from "react";
 import styles from "./sequenceInteraction.module.scss";
@@ -8,6 +9,7 @@ export default function SequenceInteraction({
   currentStation,
 }) {
   const { sendDataToAPI } = useContext(UserContext);
+  const context = useContext(TimerContext);
 
   const [currenteFrame, setCurrenteFrame] = useState();
 
@@ -23,7 +25,8 @@ export default function SequenceInteraction({
           sendDataToAPI({
             page: `station-${currentStation.id}`,
             baseInteraction_id: currentInteractionData.id,
-            keystroke: `potentiometer-${keystrokes.potentiometer[key]}`
+            keystroke: `potentiometer-${keystrokes.potentiometer[key]}`,
+            timeElapsed: context.timeElapsed
           });
         }
       });

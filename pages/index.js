@@ -19,6 +19,10 @@ export default function Home() {
       number: 2,
       text: "Enciende la consola",
     },
+    {
+      number: 3,
+      text: "Activa el modo de control por consola",
+    },
   ];
 
   useEffect(() => {

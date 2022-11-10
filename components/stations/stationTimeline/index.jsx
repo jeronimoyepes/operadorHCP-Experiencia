@@ -38,6 +38,7 @@ export default function StationTimeline({ interactionData, currentStation }) {
       sendDataToAPI({
         page: `station-${currentStation.id}`,
         baseInteraction_id: currentInteractionData.id,
+        timeElapsed: context.timeElapsed
       });
   }, [currentInteractionData]);
 

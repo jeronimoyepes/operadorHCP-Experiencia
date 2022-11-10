@@ -3,7 +3,7 @@
 - [x] Tornillos y clavos
 - [x] Sacar adhesivo (Propalcote 70 y Adhesivo)
 - [x] Comprar Knobs o imprimir 3D
-- [ ] Cable para el jack
+- [x] Cable para el jack
 
 
 - [x] Definir el componente para hacer la toma de decisiones
@@ -18,7 +18,7 @@
 	- [ ] Ruta para descargar toda la DB (Excel)
 - [x] Capturar los datos de usuario en cada pantalla
 - [ ] Pantalla de inicio
-- [ ] Terminar la conexión del puerto Jack
+- [x] Terminar la conexión del puerto Jack
 - [ ] Trivia al final de la experiencia
 - [ ] (Opcional) Buscar sonidos para ambientar
 	- [ ] Puede haber una ambientación diferente para cada estación

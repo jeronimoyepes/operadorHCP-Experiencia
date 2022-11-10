@@ -5,7 +5,8 @@ const keystrokes = {
   stationArtic: "q",
   stationSubmarine: "w",
   stationLunar: "e",
-  switch: "i",
+  switchON: "i",
+  switchOFF: "h",
   start: "a",
   potentiometer: {
     "o": 0,

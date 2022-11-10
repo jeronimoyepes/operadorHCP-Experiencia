@@ -1,4 +1,5 @@
 import keystrokes from "@/helpers/keystrokesValues";
+import { TimerContext } from "pages/mainExperience";
 import { UserContext } from "pages/_app";
 import { useContext, useEffect, useState } from "react";
 import ControlButton from "../../controlButton";
@@ -9,6 +10,7 @@ export default function DecisionsInteraction({
   currentStation,
 }) {
   const { sendDataToAPI } = useContext(UserContext);
+  const context = useContext(TimerContext);
 
 
   const [decisionTaken, setDecisionTaken] = useState(null);
@@ -38,6 +40,7 @@ export default function DecisionsInteraction({
           keystroke: Object.keys(keystrokes).find(
             (keyName) => keystrokes[keyName] === keyPressed
           ),
+          timeElapsed: context.timeElapsed
         });
 
         window.removeEventListener("keyup", handleKeyDecision);
