@@ -3,11 +3,6 @@ import styles from "./timeLine.module.scss";
 
 export function TimeLine({ timeLineData, stationData, viewedInteractions }) {
 
-  useEffect(() => {
-    console.log("viewedInteractions", viewedInteractions)
-  }, [])
-  
-
   return (
     <div className={styles.container}>
       <div className={styles.label}>

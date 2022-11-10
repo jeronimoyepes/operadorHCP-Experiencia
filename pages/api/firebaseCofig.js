@@ -29,24 +29,25 @@ const writeToFirebase = (json) => {
 // Función para leer de Firebase en una fecha especifica y escribir csv
 const readFromFirebase = () => {
   // Query es una función de firebase, recibe la coleción y los filtros. Crea un query para firebase
-  const readQuery = query(
-    collection(db, FBcollection),
-    where(user_id)
-  );
+  const readQuery = collection(db, FBcollection)
 
   // getDocs recibe el objeto query
-  return getDocs(readQuery).then((doc) => {
-    // ALmacenar los documentos que recibimos de firebase
-    const collecionObject = doc.docs;
-
-    // Iniciar un array donde se almacenaran solo los datos de los documentos
-    const documents = [];
-
-    // Iterar sobre los documentos y agregar los datos de dichos documentos al nuevo array
-    collecionObject.forEach((element) => {
-      documents.push(element.data());
+  return new Promise((resolve, reject) => {
+    getDocs(readQuery).then((doc) => {
+      // ALmacenar los documentos que recibimos de firebase
+      const collecionObject = doc.docs;
+  
+      // Iniciar un array donde se almacenaran solo los datos de los documentos
+      const documents = [];
+  
+      // Iterar sobre los documentos y agregar los datos de dichos documentos al nuevo array
+      collecionObject.forEach((element) => {
+        documents.push(element.data());
+      });
+      documents.length == 0 && reject("vacío")
+      resolve(documents)
     });
-  });
+  })
 };
 
 export { writeToFirebase, readFromFirebase };

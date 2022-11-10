@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import StationsRenderer from "@/components/stations/stationsRenderer";
 import styles from "./mainExperience.module.scss";
@@ -6,10 +6,14 @@ import BorderContainer from "@/components/borderContainer/BorderContainer";
 import keystrokes from "@/helpers/keystrokesValues";
 import {durationMinutes} from "@/helpers/experienceDuration"
 import Router from "next/router";
+import { UserContext } from "pages/_app";
 
 export const TimerContext = createContext();
 
 export default function MainExperience() {
+
+  const {sendDataToAPI} = useContext(UserContext)
+
   const [currentStation, setCurrentStation] = useState();
   const [timeElapsed, setTimeLeft] = useState();
 
@@ -42,6 +46,9 @@ export default function MainExperience() {
     window.onbeforeunload = function () {
       return "Prevenir refrescar la página";
     };
+    sendDataToAPI({
+      page: "MainExperience"
+    })
   }, []);
 
   useEffect(() => {

@@ -43,15 +43,15 @@ const lunarInteractions = [
         position: 10,
       },
       {
-        path: "lunarMedia/3sequence/roca_1.png",
+        path: "lunarMedia/3sequence/roca_2.png",
         position: 20,
       },
       {
-        path: "lunarMedia/3sequence/roca_1.png",
+        path: "lunarMedia/3sequence/roca_3.png",
         position: 40,
       },
       {
-        path: "lunarMedia/3sequence/roca_1.png",
+        path: "lunarMedia/3sequence/roca_4.png",
         position: 80,
       },
     ],

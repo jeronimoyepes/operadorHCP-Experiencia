@@ -6,6 +6,7 @@ import styles from "./index.module.scss";
 import BorderContainer from "components/borderContainer/BorderContainer";
 import Router from "next/router";
 import { UserContext } from "./_app";
+import keystrokes from "@/helpers/keystrokesValues";
 
 export default function Home() {
   const { sendDataToAPI } = useContext(UserContext);
@@ -31,7 +32,7 @@ export default function Home() {
     });
     function handleKeyDown(e) {
       const key = e.key;
-      if (key == "a") {
+      if (key == keystrokes.switchON) {
         document.removeEventListener("keyup", handleKeyDown);
         return Router.push("/instructions/page1");
       }
