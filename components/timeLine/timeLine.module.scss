@@ -3,6 +3,7 @@
 .container {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .label {
@@ -17,10 +18,9 @@
 
 .line {
   padding: 5px;
-  margin: 20px 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: top;
   justify-content: space-between;
   border-top: $border-general;
   border-bottom: $border-general;
@@ -28,21 +28,29 @@
 }
 
 .momment {
-  width: 120px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
+  padding: 10px;
+  flex: 1 1 0px;
   > div {
     opacity: 0.3;
+    text-align: center;
+  }
+  p {
+    font-family: "Fira Code", monospace;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1.2em;
   }
   .viewed {
     opacity: 1;
+    p {
+      display: block;
+    }
   }
   .interactionIcon {
-    max-width: 120px;
-    height: 110px;
-  }h
+    max-width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
   .separator {
     width: 50px;
     margin-right: 10px;

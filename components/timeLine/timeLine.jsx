@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import styles from "./timeLine.module.scss";
 
 export function TimeLine({ timeLineData, stationData, viewedInteractions }) {
+
+  useEffect(() => {
+    console.log("viewedInteractions", viewedInteractions)
+  }, [])
+  
 
   return (
     <div className={styles.container}>
@@ -9,14 +15,14 @@ export function TimeLine({ timeLineData, stationData, viewedInteractions }) {
         <p>{stationData.name}</p>
       </div>
       <div className={styles.line}>
-        {timeLineData.map((momment, index) => {
+        {viewedInteractions && timeLineData.map((momment, index) => {
           return (
             <div key={index} className={styles.momment}>
               <div
                 className={
                   viewedInteractions.some(
-                    (interacion) => interacion.id == momment.id
-                  ) ? styles.viewed : null
+                    (interacion) => interacion == momment.id
+                  ) ? styles.viewed : undefined
                 }
               >
                 <img
@@ -24,6 +30,7 @@ export function TimeLine({ timeLineData, stationData, viewedInteractions }) {
                   src={`reportType-${momment.type}.svg`}
                   alt=""
                 />
+                <p>{momment.title}</p>
               </div>
             </div>
           );

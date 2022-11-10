@@ -56,7 +56,7 @@ export default function FinalReport() {
       <div className={styles.header}>
         <h2>Reporte de rendimiento</h2>
         <div>
-          <p>Gracias por tu valioso tiempo operador, a continuación verás resaltados los informes que capturaste durante la sincronización</p>
+          <p>Gracias por tu valioso tiempo operador, a continuación verás resaltados los informes que capturaste durante el turno de trabajo.</p>
           <ControlButton
             action={{name: "Finalizar"}}
             index={0}

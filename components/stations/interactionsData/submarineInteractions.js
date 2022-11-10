@@ -36,7 +36,7 @@ const submarineInteractions = [
   },
   {
     id: 11,
-    title: "Una gotera",
+    title: "Problema con los trajes de buceo",
     type: "text",
     body: "El informe más reciente suministrado por el equipo de monitoreo, reveló que habían variaciones en las condiciones químicas del agua en los límites nororientales del triángulo de las bermudas. El equipo de exploración se preparó para realizar investigaciones en la superficie, sin embargo, los trajes de buceo se encontraban con ácaros, polvo, moho y un terrible hedor a humedad. Solicito de carácter urgente ayuda con esta situación para proceder con la misión de exploración. ",
     imagePath: "",

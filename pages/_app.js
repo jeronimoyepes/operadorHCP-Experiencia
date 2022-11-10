@@ -6,6 +6,7 @@ import sendDataToAPI from "@/helpers/sendDataToAPI";
 export const UserContext = createContext();
 
 let viewedInteractions = []
+console.log("viewedInteractions", viewedInteractions)
 
 function MyApp({ Component, pageProps }) {
 
