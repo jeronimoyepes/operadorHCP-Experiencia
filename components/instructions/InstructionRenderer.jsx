@@ -15,7 +15,6 @@ export default function InstructionRenderer({
   pageCounter,
   controlsData,
 }) {
-
   const { sendDataToAPI } = useContext(UserContext);
 
   const asideGeneralData = {
@@ -26,11 +25,11 @@ export default function InstructionRenderer({
   };
 
   useEffect(() => {
+    children &&
+      sendDataToAPI({
+        page: "instructions-" + children._owner?.elementType?.name, //Extrae el nombre de la página
+      });
 
-    sendDataToAPI({
-      page: "instructions-" + children._owner.elementType.name, //Extrae el nombre de la página
-    });
-  
     function handleKeyInstructions(e) {
       const key = e.key;
       if (key == keystrokesValues.button0) {
@@ -56,7 +55,7 @@ export default function InstructionRenderer({
 
     return () => {
       window.removeEventListener("keyup", handleKeyInstructions);
-    }
+    };
   }, []);
 
   return (
