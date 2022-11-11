@@ -93,15 +93,14 @@ const lunarInteractions = [
     type: "text",
     body: "Señor Operador hoy  me siento introspectivo, Eines Padre siempre ha dicho que es un desperdicio de tiempo y esfuerzo, pero siempre me he preguntado: ¿Qué hay en el lado oscuro de la luna? Tanto tiempo de investigación y aún nos asusta mirar allí. ¿Qué tal si existan otras formas de vida extraterrestres muy cerca de aquí?. ¿Cómo es posible que un universo tan basto y extenso, seamos la única forma de vida inteligente?. En ocasiones nuestros radares captan señales extrañas que aún no logramos descifrar, viendo el aparente vacío desde esta base, siento que hay algo que mis ojos no pueden captar que nuestros receptores sí. De vivir aquí afuera, seguramente tienen mejor tecnología para nuestros cultivos hidropónicos. Quizá revelen sus secretos para lograr que mi cultivo de Coca Cola germine. Decidí pedir que se lanzara una señal continua desde la base con la canción 'Fly me to the moon', tal vez nuestros vecinos extraterrestres la escuchen y se interesen en nosotros. ¿Crees que Dijkstra también pueda captarla en los radares de su base?",
     imagePath: "",
-    sequence: [
-    ],
+    sequence: [],
     actions: [],
   },
   {
     id: 21,
     title: "Fotografías del explorador lunar",
     type: "signal",
-    body: "Ayer el equipo de excavación escogió el en los que se iniciará la explotación de minerales lunares. Eines Padre dice que es uno de los proyectos más importantes de la base, ya que son minerales de altísimo costo en la Tierra, así que debo estar muy atento a cualquier novedad. He estado acompañando al equipo durante todo el día, enviando señal desde el sitio. Ojalá la doctora Dijkstra del ártico pudiera ver el gran trabajo que estoy haciendo, sólo digo...",
+    body: "Ayer el equipo de excavación escogió el lugar en el que se iniciará la explotación de minerales lunares. Eines padre dice que es uno de los proyectos más importantes de la base, ya que son minerales de altísimo costo en la Tierra, así que debo estar muy atento a cualquier novedad. He estado acompañando al equipo durante todo el día, enviando señal desde el sitio. Ojalá la doctora Dijkstra del ártico pudiera ver el gran trabajo que estoy haciendo, sólo digo...",
     imagePath: "",
     sequence: [
       {
@@ -175,14 +174,12 @@ const lunarInteractions = [
   },
   {
     id: 23,
-    title: "Fotografías de la tierra",
+    title: "Tormenta solar",
     type: "text",
-    body: "Informo que el investigador encargado del monitoreo diario de radiación, partículas y posibles amenazas externas para la base, notó incrementos alarmantes en las erupciones solares de los últimos días, por eso prevemos que para en 27 días tendremos tormentas solares entre nocivas y mortales para cualquier instalación que no cuente con atmósfera protectora. Para ello, es de gran orgullo, reconocer que Eines Padre me capacitó perfectamente para evitar las amenazas de este clima espacial alterado. Estoy un poco preocupado por nuestros cultivos hidropónicos, es posible que las pequeñas dosis de radiación hayan interferido con mi cultivo de Coca Cola. Reforzaré personalmente este espacio. Enviaré un informe cuando termine el período crítico.",
+    body: "Informo que el investigador encargado del monitoreo diario de radiación, partículas y posibles amenazas externas para la base, notó incrementos alarmantes en las erupciones solares de los últimos días, por eso prevemos que para en 27 días tendremos tormentas solares entre nocivas y mortales para cualquier instalación que no cuente con atmósfera protectora. Para ello, es de gran orgullo, reconocer que Eines Padre me capacitó perfectamente para evitar las amenazas de este clima espacial alterado. Estoy un poco preocupado por nuestros cultivos hidropónicos, es posible que las pequeñas dosis de radiación hayan interferido con mi cultivo de Coca Cola. Reforzaré personalmente este espacio. Este es mi informe final",
     imagePath: "",
-    sequence: [
-    ],
-    actions: [
-    ],
+    sequence: [],
+    actions: [],
   },
 ];
 
