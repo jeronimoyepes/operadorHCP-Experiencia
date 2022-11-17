@@ -1,9 +1,14 @@
 import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import keystrokes from "@/helpers/keystrokesValues";
-import { useEffect } from "react";
-import styles from "./Trivia.module.scss";
+import { useEffect, useState } from "react";
+import styles from "./trivia.module.scss";
+
+// JSON con las preguntas y sus respuestas
+import { questions } from "./questionsData";
 
 export default function Trivia() {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+
   const asideGeneralData = {
     h1: "IC-HCP",
     h2: "Iniciativa científica",
@@ -11,54 +16,39 @@ export default function Trivia() {
     date: "La HCP desea evaluar tu desempeño, responde las siguientes preguntas",
   };
 
-  const question = {
-    question:
-      "Eres un operador de comunicaciones para una institución de investigación científica a escala global.",
-    answers: [
-      {
-        text: "0. Tú trabajo es supervisar los reportes enviados desde las diferentes.",
-        correct: true,
-      },
-      {
-        text: "1. Tú trabajo es supervisar los reportes enviados desde las diferentes.",
-      },
-      {
-        text: "2. Tú trabajo es supervisar los reportes enviados desde las diferentes.",
-      },
-    ],
-  };
-
   useEffect(() => {
     function handleKeyAnswers(e) {
       const key = e.key;
-      console.log("concha")
+      // Debe ser  - 1 porque se inicializa el estado con la primera pregunta y es base 0
+      if (currentQuestion > questions.length - 2) {
+        window.location.assign("/");
+      }
       if (key == keystrokes.button0) {
-        alert("Chimba0")
-        // question.answers.some((answer) => answer.correct).indexOf == 0 && alert("Chimba0");
+        questions[currentQuestion]?.answers.correct == 0 && alert("Chimba0");
       }
       if (key == keystrokes.button1) {
-        alert("Chimba1")
-        // question.answers.some((answer) => answer.correct).indexOf == 1 && alert("Chimba1");
+        questions[currentQuestion]?.answers.correct == 0 && alert("Chimba0");
       }
       if (key == keystrokes.button2) {
-        alert("Chimba2")
-        // question.answers.some((answer) => answer.correct).indexOf == 2 && alert("Chimba2");
+        questions[currentQuestion]?.answers.correct == 0 && alert("Chimba0");
       }
+      setCurrentQuestion((prevState, props) => prevState + 1);
+      console.log(currentQuestion)
     }
     window.addEventListener("keyup", handleKeyAnswers);
 
     return () => {
-        window.removeEventListener("keyup", handleKeyAnswers);
+      window.removeEventListener("keyup", handleKeyAnswers);
     };
-  }, []);
+  }, [currentQuestion]);
 
   return (
     <div className={styles.container}>
       <AsideGeneral props={asideGeneralData} />
       <div>
-        <div className={styles.question}>{question.question}</div>
+        <div className={styles.question}>{questions[currentQuestion]?.ask}</div>
         <div className={styles.answers}>
-          {question.answers.map((answer, index) => {
+          {questions[currentQuestion]?.answers.map((answer, index) => {
             return (
               <div key={index} className={styles.answers_answer}>
                 <div className={styles.action}>

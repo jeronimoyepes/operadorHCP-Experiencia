@@ -13,6 +13,8 @@ export default function StationTimeline({ interactionData, currentStation }) {
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 
+  const progressBar = useRef(null)
+
   const TimeForEachInteraction = getTimeForEachInteraction(
     context.experienceTotalDuration,
     interactionData.length
@@ -31,6 +33,7 @@ export default function StationTimeline({ interactionData, currentStation }) {
         return setCurrentInteractionData(interaction);
       }
     });
+
   }, [context.timeElapsed, interactionData]);
 
   useEffect(() => {
@@ -42,6 +45,7 @@ export default function StationTimeline({ interactionData, currentStation }) {
       });
       viewedInteractions.push(currentInteractionData.id);
     }
+
   }, [currentInteractionData]);
 
   return (
@@ -56,13 +60,14 @@ export default function StationTimeline({ interactionData, currentStation }) {
                 alt=""
               />
             </div>
+            <div className={styles.progressBar}>
+              <div ref={progressBar} className={styles.bar}>Tiempo hasta próximo informe</div>
+            </div>
             <div className={styles.body}>
               {currentInteractionData.body}
               {currentInteractionData.type == "image" && (
                 <div className={styles.interactionImage}>
-                  <BorderContainer>
-                    <img src={currentInteractionData.imagePath} alt="" />
-                  </BorderContainer>
+                  <img src={currentInteractionData.imagePath} alt="" />
                 </div>
               )}
             </div>

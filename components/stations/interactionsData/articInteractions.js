@@ -71,7 +71,7 @@ const articInteractions = [
     id: 2,
     title: "Botes anclados de las primeras expediciones",
     type: "signal",
-    body: "Una de nuestros grupos de expediciones encontró barcos a vapor de los pioneros exploradores. Algunas vez enterrados en metros de nieve, ahora el derretimiento los descubre para ser estudiados, te estoy enviando la información en este momento, sintoniza la frecuencia desde el tablero de control, es bastante emocionante.",
+    body: "Uno de nuestros grupos de expediciones encontró barcos a vapor de los pioneros exploradores. Algunas vez enterrados en metros de nieve, ahora el derretimiento los descubre para ser estudiados, te estoy enviando la información en este momento, sintoniza la frecuencia desde el tablero de control, es bastante emocionante.",
     imagePath: "",
     sequence: [
       {

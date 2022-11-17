@@ -37,9 +37,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TODOs.md",
+                "file": "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "5c119a54b599cbe4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "attachments/Fotos lunares 4.jpg"
               }
             }
           },
@@ -98,7 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 282.5
+    "width": 435.5
   },
   "right": {
     "id": "63f8fd3c99e13fd9",
@@ -114,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TODOs.md",
+                "file": "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,15 +144,15 @@
   },
   "active": "db496094d0c1ce1d",
   "lastOpenFiles": [
+    "attachments/Fotos lunares 4.jpg",
+    "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
+    "TODOs.md",
     "Video.md",
     "Bases/Interacciones/Ártico/8. Sueño de que una criatura suplantaba uno de sus compañeros de la base.md",
     "Bases/Interacciones/Submarina/1. Sonidos de ballenas.md",
     "Bases/Interacciones/Submarina/8. Mantenimiento de los equipos de buceo.md",
     "Bases/Interacciones/Submarina/6. Una gotera.md",
     "Bases/Interacciones/Submarina/5. Instrumentos fallando porque está en el triángulo de las bermudas.md",
-    "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md",
-    "Bases/2. Base submarina.md",
-    "Bases/Interacciones/Submarina/2. Restos de submarinos nucleares.md",
-    "Bases/Interacciones/Submarina/3. Calamar gigante.md"
+    "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md"
   ]
 }

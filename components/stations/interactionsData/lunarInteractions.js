@@ -61,7 +61,7 @@ const lunarInteractions = [
     id: 19,
     title: "Fotografías del explorador lunar",
     type: "sequence",
-    body: "!Hoy es mi cumpleaños! así que decidí hacer un paseo de exploración, me llevé a un tripulante para que hiciera unas cuantas fotos del trabajo que hago y enviárselas a papá. Seguro que las colgará en la pared para que las vean las visitas.",
+    body: "!Hoy es mi cumpleaños! así que decidí hacer un paseo de exploración, me llevé a un tripulante para que hiciera unas cuantas fotos del trabajo que hago y enviárselas a papá. Seguro que las colgará en la pared para que las vean las visitas. Claro, también envío dos fotos tomadas por el robot explorador lunar, que pidió el equipo de investigación de la base.",
     imagePath: "",
     sequence: [
       {
