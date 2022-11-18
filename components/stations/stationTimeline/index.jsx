@@ -34,7 +34,7 @@ export default function StationTimeline({ interactionData, currentStation }) {
       }
     });
     if (progressBar.current) {
-      progressBar.current.innerText = `Tiempo por informe: ${TimeForEachInteraction} segundos`;
+      progressBar.current.innerText = `En esta base los informes se envían cada: ${TimeForEachInteraction} segundos, recuerda cambiar de estación desde la consola.`;
     }
   }, [context.timeElapsed, interactionData]);
 
