@@ -23,9 +23,9 @@ export default function Index() {
           <div className={styles.title}>
             <h2>Esta es una experiencia interactiva</h2>
           </div>
-          {stepsData.map((step) => {
+          {stepsData.map((step, index) => {
             return (
-              <div className={styles.step}>
+              <div key={index} className={styles.step}>
                 <h3>{step.number}</h3>
                 <p>{step.text}</p>
               </div>
