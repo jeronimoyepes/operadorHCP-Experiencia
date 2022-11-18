@@ -1,13 +1,16 @@
 import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import keystrokes from "@/helpers/keystrokesValues";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./trivia.module.scss";
 
 // JSON con las preguntas y sus respuestas
 import { questions } from "./questionsData";
+import { UserContext } from "pages/_app";
 
 export default function Trivia() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
+
+  const { sendDataToAPI } = useContext(UserContext);
 
   const questionTitle = useRef(null);
 
@@ -18,6 +21,17 @@ export default function Trivia() {
     date: "La HCP desea evaluar tu desempeño, responde las siguientes preguntas",
   };
 
+  function checkCorrectAswer(answer) {
+    const title = questionTitle.current;
+    if (questions[currentQuestion]?.answers[answer].correct) {
+      title.style.backgroundColor = "green";
+      title.children[1].innerText = "Correcto";
+    } else {
+      title.style.backgroundColor = "red";
+      title.children[1].innerText = "Incorrecto";
+    }
+  }
+
   useEffect(() => {
     function handleKeyAnswers(e) {
       const key = e.key;
@@ -26,25 +40,13 @@ export default function Trivia() {
         window.location.assign("/");
       }
       if (key == keystrokes.button0) {
-        if (questions[currentQuestion]?.answers[0].correct) {
-          questionTitle.current.style.backgroundColor = "green";
-        } else {
-          questionTitle.current.style.backgroundColor = "red";
-        }
+        checkCorrectAswer(0);
       }
       if (key == keystrokes.button1) {
-        if (questions[currentQuestion]?.answers[1].correct) {
-          questionTitle.current.style.backgroundColor = "green";
-        } else {
-          questionTitle.current.style.backgroundColor = "red";
-        }
+        checkCorrectAswer(1);
       }
       if (key == keystrokes.button2) {
-        if (questions[currentQuestion]?.answers[2].correct) {
-          questionTitle.current.style.backgroundColor = "green";
-        } else {
-          questionTitle.current.style.backgroundColor = "red";
-        }
+        checkCorrectAswer(2);
       }
       // Esto es para evitar que se pase de pregunta si se presiona otra tecla diferente a la de los botones
       if (
@@ -52,10 +54,20 @@ export default function Trivia() {
         key == keystrokes.button1 ||
         key == keystrokes.button2
       ) {
+        // Enviar respuesta a la base de datos
+        sendDataToAPI({
+          page: "Trivia",
+          triviaAnswer: Object.keys(keystrokes).find(
+            (keyName) => keystrokes[keyName] === key
+          ),
+        });
+
+        // Esperar un segundo para avanzar a siguiente pregunta y quitar el color de feedback de respuesta
         setTimeout(() => {
           questionTitle.current.style.backgroundColor = "initial";
           setCurrentQuestion((prevState) => prevState + 1);
         }, 1000);
+        window.removeEventListener("keyup", handleKeyAnswers);
       }
     }
     window.addEventListener("keyup", handleKeyAnswers);

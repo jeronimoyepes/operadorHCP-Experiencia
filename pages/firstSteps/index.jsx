@@ -1,11 +1,11 @@
 import { useContext, useEffect } from "react";
 
 import { NumberedBox } from "components/numberedBox/NumberedBox";
-import { Layout } from "../components/layout/Layout";
+import { Layout } from "../../components/layout/Layout";
 import styles from "./index.module.scss";
 import BorderContainer from "components/borderContainer/BorderContainer";
 import Router from "next/router";
-import { UserContext } from "./_app";
+import { UserContext } from "../_app";
 import keystrokes from "@/helpers/keystrokesValues";
 
 export default function Home() {
