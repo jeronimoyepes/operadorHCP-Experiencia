@@ -1,7 +1,7 @@
 import AsideGeneral from "@/components/asideGeneral/AsideGeneral";
 import keystrokes from "@/helpers/keystrokesValues";
 import { useContext, useEffect, useRef, useState } from "react";
-import styles from "./trivia.module.scss";
+import styles from "./triviaStyle.module.scss";
 
 // JSON con las preguntas y sus respuestas
 import { questions } from "./questionsData";
