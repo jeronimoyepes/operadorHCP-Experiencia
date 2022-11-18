@@ -5,7 +5,7 @@ import styles from "./triviaStyle.module.scss";
 
 
 // JSON con las preguntas y sus respuestas
-import { questions } from "./questionsData";
+import { questions } from "../../helpers/questionsData";
 import { UserContext } from "pages/_app";
 
 export default function Trivia() {
