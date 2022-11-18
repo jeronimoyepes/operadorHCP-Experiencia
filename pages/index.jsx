@@ -35,8 +35,8 @@ export default function Index() {
         <div className={styles.aside}>
           <img src="console-vector.svg" alt="" />
           <p>
-            Debes tener el tablero de control para poder interactuar con la
-            experiencia a partir de este punto
+            Usa el tablero de control para poder interactuar con la
+            experiencia.
           </p>
           <a href="#" onClick={() => window?.location.assign("/firstSteps")}>Continuar</a>
           <span>* Desactiva las máyusculas</span>

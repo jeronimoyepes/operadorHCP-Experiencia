@@ -14,6 +14,7 @@ export default function InstructionRenderer({
   pages,
   pageCounter,
   controlsData,
+  quitResponse
 }) {
   const { sendDataToAPI } = useContext(UserContext);
 
@@ -41,6 +42,9 @@ export default function InstructionRenderer({
         } else {
           Router.push(`./page${pages.next}`);
         }
+      }
+      if (key == keystrokesValues.button1) {
+        quitResponse.current.innerText = "El humor es siempre permitido dentro de límites razonables. ¡Feliz día Operador!"
       }
       if (key == keystrokesValues.button2) {
         if (pages.prev == 0) {

@@ -21,23 +21,23 @@ const articInteractions = [
     imagePath: "",
     sequence: [
       {
-        path: "articMedia/1sequence/1deicing_0.png",
+        path: "articMedia/1sequence/1deicing_10.png",
         position: 0,
       },
       {
-        path: "articMedia/1sequence/1deicing_1.png",
+        path: "articMedia/1sequence/1deicing_9.png",
         position: 10,
       },
       {
-        path: "articMedia/1sequence/1deicing_2.png",
+        path: "articMedia/1sequence/1deicing_8.png",
         position: 20,
       },
       {
-        path: "articMedia/1sequence/1deicing_3.png",
+        path: "articMedia/1sequence/1deicing_7.png",
         position: 30,
       },
       {
-        path: "articMedia/1sequence/1deicing_4.png",
+        path: "articMedia/1sequence/1deicing_6.png",
         position: 40,
       },
       {
@@ -45,23 +45,23 @@ const articInteractions = [
         position: 50,
       },
       {
-        path: "articMedia/1sequence/1deicing_6.png",
+        path: "articMedia/1sequence/1deicing_4.png",
         position: 60,
       },
       {
-        path: "articMedia/1sequence/1deicing_7.png",
+        path: "articMedia/1sequence/1deicing_3.png",
         position: 70,
       },
       {
-        path: "articMedia/1sequence/1deicing_8.png",
+        path: "articMedia/1sequence/1deicing_2.png",
         position: 80,
       },
       {
-        path: "articMedia/1sequence/1deicing_9.png",
+        path: "articMedia/1sequence/1deicing_1.png",
         position: 90,
       },
       {
-        path: "articMedia/1sequence/1deicing_10.png",
+        path: "articMedia/1sequence/1deicing_0.png",
         position: 100,
       },
     ],

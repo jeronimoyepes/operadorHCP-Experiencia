@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 // Modules
 
@@ -9,6 +9,9 @@ import { Layout } from "@/components/layout/Layout";
 import keystrokesValues from "@/helpers/keystrokesValues";
 
 const Page5 = () => {
+
+  const quitResponse = useRef(null)
+
   const pages = { prev: 4, next: 6 };
   const controlsData = [
     {
@@ -29,6 +32,7 @@ const Page5 = () => {
       <InstructionRenderer
         pages={pages}
         controlsData={controlsData}
+        quitResponse={quitResponse}
       >
         <div className={styles.container}>
           <p>
@@ -42,6 +46,7 @@ const Page5 = () => {
           <p>
             ATT. Directiva de la HCP <img src="/heart.svg" alt="" />
           </p>
+          <p ref={quitResponse}></p>
         </div>
       </InstructionRenderer>
     </Layout>

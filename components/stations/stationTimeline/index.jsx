@@ -1,6 +1,6 @@
 import DecisionsInteraction from "../../interactions/decisionsInteraction";
 import styles from "./stationTimeline.module.scss";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { TimerContext } from "pages/mainExperience";
 import getTimeForEachInteraction from "../helpers/getTimeForEachInteraction";
 import SequenceInteraction from "@/components/interactions/sequenceInteraction";
@@ -13,7 +13,7 @@ export default function StationTimeline({ interactionData, currentStation }) {
 
   const [currentInteractionData, setCurrentInteractionData] = useState();
 
-  const progressBar = useRef(null)
+  const progressBar = useRef(null);
 
   const TimeForEachInteraction = getTimeForEachInteraction(
     context.experienceTotalDuration,
@@ -33,7 +33,9 @@ export default function StationTimeline({ interactionData, currentStation }) {
         return setCurrentInteractionData(interaction);
       }
     });
-
+    if (progressBar.current) {
+      progressBar.current.innerText = `Tiempo por informe: ${TimeForEachInteraction} segundos`;
+    }
   }, [context.timeElapsed, interactionData]);
 
   useEffect(() => {
@@ -45,7 +47,6 @@ export default function StationTimeline({ interactionData, currentStation }) {
       });
       viewedInteractions.push(currentInteractionData.id);
     }
-
   }, [currentInteractionData]);
 
   return (
@@ -61,7 +62,9 @@ export default function StationTimeline({ interactionData, currentStation }) {
               />
             </div>
             <div className={styles.progressBar}>
-              <div ref={progressBar} className={styles.bar}>Tiempo hasta próximo informe</div>
+              <div ref={progressBar} className={styles.bar}>
+                
+              </div>
             </div>
             <div className={styles.body}>
               {currentInteractionData.body}

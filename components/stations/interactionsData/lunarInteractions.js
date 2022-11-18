@@ -26,7 +26,7 @@ const lunarInteractions = [
     id: 11,
     title: "Reporte de crecimiento de hidropónicos",
     type: "image",
-    body: "!Hola Operador! Ayer un tripulante me dijo que la Coca Cola no se podía cultivar, aún albergo mis dudas de si es posible o no, seguiré monitoreando el crecimiento. Hasta el momento hemos tenido los siguientes reportes de crecimiento de cultivos: Ayer leí el reporte de la Base del Ártico ¿Cómo está la Dra. Dijkstra?",
+    body: "!Hola Operador! Ayer un tripulante me dijo que la Coca-Cola no se podía cultivar, aún albergo mis dudas de si es posible o no, seguiré monitoreando el crecimiento. Hasta el momento hemos tenido los siguientes reportes de crecimiento de cultivos: Ayer leí el reporte de la Base del Ártico ¿Cómo está la Dra. Dijkstra?",
     imagePath: "lunarMedia/2hidroponics.png",
     sequence: [],
     actions: [],

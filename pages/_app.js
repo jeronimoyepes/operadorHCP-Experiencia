@@ -8,7 +8,8 @@ import { durationMinutes } from "../helpers/experienceDuration";
 export const UserContext = createContext();
 
 let viewedInteractions = [];
-const userHash = generateGUID();
+
+let userHash = generateGUID();
 
 function MyApp({ Component, pageProps }) {
 
