@@ -2,4 +2,76 @@
 
 .container {
   font-family: "Fira Code", monospace;
+  margin: 30px;
+  .content {
+    display: flex;
+    border: $border-general;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .main {
+    border-right: $border-general;
+    width: 80%;
+  }
+  .aside {
+    width: 20%;
+    padding: 30px;
+    img {
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 1.2em;
+    }
+    a {
+      margin: 30px 0;
+      border: 2px solid $color-blue;
+      padding: 20px;
+      display: block;
+      text-align: center;
+      border-radius: 15px;
+      font-family: silkscreen;
+      color: $color-blue;
+      font-size: 1.5em;
+      &:hover {
+        background-color: $color-blue;
+        color: $background-color;
+      }
+    }
+    span {
+      color: $color-whey-opacity;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  .title {
+    border-bottom: $border-general;
+    padding: 60px;
+    text-align: center;
+    font-size: 1.8em;
+    @include textGlow2($color-whey-opacity);
+  }
+  .step {
+    border-bottom: $border-general;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      border: none;
+    }
+    h3 {
+      font-family: "Chakra Petch";
+      padding: 40px;
+      text-align: center;
+      color: $color-orange;
+      @include textGlow1($color-orange-opacity);
+      border-right: $border-general;
+      font-size: 8em;
+      width: 15%;
+    }
+    p {
+      padding: 30px;
+      display: block;
+      width: 85%;
+      font-size: 1.7em;
+    }
+  }
 }

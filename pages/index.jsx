@@ -12,7 +12,7 @@ export default function Index() {
     },
     {
       number: 3,
-      text: "Los contenidos son ficticios y la experiencia tiene una duración determinada, al finalizarla se te presentará un informe con tu actividad y se te pedirá responder unas preguntas.",
+      text: "Los contenidos son ficticios y la experiencia tiene una duración determinada, al finalizarla se te presentará un informe con tu actividad y pedirá responder unas preguntas.",
     },
   ];
 
@@ -33,12 +33,14 @@ export default function Index() {
           })}
         </div>
         <div className={styles.aside}>
-          <img src="" alt="" />
+          <img src="console-vector.svg" alt="" />
           <p>
             Debes tener el tablero de control para poder interactuar con la
             experiencia a partir de este punto
           </p>
-          <a href="#"></a>
+          <a href="#" onClick={() => window?.location.assign("/firstSteps")}>Continuar</a>
+          <span>* Desactiva las máyusculas</span>
+          <span>* Mejor en pantalla completa, presionar [F11]</span>
         </div>
       </div>
     </div>
