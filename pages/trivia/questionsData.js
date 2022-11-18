@@ -1,4 +1,4 @@
-export const questions = [
+const questions = [
   {
     ask: "Los restos causantes del virus prehistórico pertenecían a:",
     answers: [
@@ -105,3 +105,5 @@ export const questions = [
     ],
   },
 ];
+
+export {questions}
