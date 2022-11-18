@@ -9,6 +9,7 @@ import keystrokes from "@/helpers/keystrokesValues";
 import { useContext, useEffect } from "react";
 import { UserContext } from "pages/_app";
 import ControlButton from "@/components/controlButton";
+import Router from "next/router";
 
 export default function FinalReport() {
   const { sendDataToAPI, viewedInteractions } = useContext(UserContext);
@@ -38,7 +39,7 @@ export default function FinalReport() {
       const key = e.key;
       if (key == keystrokes.button0) {
         window.removeEventListener("keyup", handleKeyFinish);
-        window.location.assign("/"); // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
+        Router.push("/trivia"); // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
       }
     }
     window.addEventListener("keyup", handleKeyFinish);

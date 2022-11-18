@@ -32,7 +32,7 @@ export default function Home() {
     });
     function handleKeyDown(e) {
       const key = e.key;
-      if (key == keystrokes.switchON) {
+      if (key == keystrokes.switchON || key == keystrokes.switchOFF) {
         document.removeEventListener("keyup", handleKeyDown);
         return Router.push("/instructions/page1");
       }
