@@ -3,6 +3,7 @@ import keystrokes from "@/helpers/keystrokesValues";
 import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./triviaStyle.module.scss";
 
+
 // JSON con las preguntas y sus respuestas
 import { questions } from "./questionsData";
 import { UserContext } from "pages/_app";
