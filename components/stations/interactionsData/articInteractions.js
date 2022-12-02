@@ -186,9 +186,9 @@ const articInteractions = [
   {
     id: 7,
     title: "Llegada de uno de los grupos de exploración",
-    type: "image",
+    type: "text",
     body: "Elizabeth Dijkstra a Operador. Hoy llegó el grupo #3 de exploración enviado a la zona BYOB, ubicada al oeste de la base. Consta de 4 investigadores, entre ellos un biólogo auxiliar, un físico, un geólogo y un médico entusiasta con algunos conocimientos básicos en ecología y experiencia tratando a pacientes en temperaturas extremas. Hoy están recuperándose de la expedición sin embargo entre los hallazgos generales, manifiestan haber encontrado alteración en la fauna y flora de la zona a causa de los cambios de temperatura y las crecientes de hasta 20 cm del nivel del mar.",
-    imagePath: "articMedia/5temperatures.png",
+    imagePath: "",
     sequence: [],
     actions: [],
   },

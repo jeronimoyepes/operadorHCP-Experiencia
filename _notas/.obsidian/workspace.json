@@ -6,67 +6,59 @@
       {
         "id": "65d042e331b79333",
         "type": "tabs",
+        "dimension": 27.306047648136833,
         "children": [
-          {
-            "id": "222a48295f0db652",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases/Interacciones/Ártico/1. Derretimiento de los glaciares.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e6afd28f3a20cd1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases/Interacciones/Lunar/1. Llegada de los nuevos suministros.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
           {
             "id": "db496094d0c1ce1d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5c119a54b599cbe4",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "attachments/Fotos lunares 4.jpg"
-              }
-            }
-          },
-          {
-            "id": "cbd455756beca6ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md",
+                "file": "El operador.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
+      },
+      {
+        "id": "758a7207d83590aa",
+        "type": "tabs",
+        "dimension": 38.85155772755039,
+        "children": [
+          {
+            "id": "063d819e9d84a35a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Estaciones de observación científica.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "7f70136c1f6ef6ec",
+        "type": "tabs",
+        "dimension": 33.84239462431277,
+        "children": [
+          {
+            "id": "803a1b8250950efc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "operación de supervisión.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 435.5
+    "width": 239.5
   },
   "right": {
     "id": "63f8fd3c99e13fd9",
@@ -124,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
+                "file": "operación de supervisión.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,17 +134,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "db496094d0c1ce1d",
+  "active": "803a1b8250950efc",
   "lastOpenFiles": [
-    "attachments/Fotos lunares 4.jpg",
+    "Estaciones de observación científica.md",
+    "El operador.md",
+    "Bases/Interacciones/Ártico/7. Llegada de uno de los grupos de exploración.md",
     "Bases/Interacciones/Lunar/4. Fotografías del explorador lunar.md",
+    "attachments/Fotos lunares 4.jpg",
     "TODOs.md",
     "Video.md",
     "Bases/Interacciones/Ártico/8. Sueño de que una criatura suplantaba uno de sus compañeros de la base.md",
     "Bases/Interacciones/Submarina/1. Sonidos de ballenas.md",
-    "Bases/Interacciones/Submarina/8. Mantenimiento de los equipos de buceo.md",
-    "Bases/Interacciones/Submarina/6. Una gotera.md",
-    "Bases/Interacciones/Submarina/5. Instrumentos fallando porque está en el triángulo de las bermudas.md",
-    "Bases/Interacciones/Submarina/0. Presentación del investigador en el puesto de reportes - Ryan.md"
+    "Bases/Interacciones/Submarina/8. Mantenimiento de los equipos de buceo.md"
   ]
 }

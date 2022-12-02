@@ -21,7 +21,7 @@ export default function Finished() {
   };
 
   useEffect(() => {
-    setInterval(() => {
+    setTimeout(() => {
       Router.push("/finalReport");
     }, 4000);
     sendDataToAPI({

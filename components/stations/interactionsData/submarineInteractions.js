@@ -48,7 +48,7 @@ const submarineInteractions = [
       },
       {
         name: "Enviar trajes nuevos",
-        response: "Se sugiere la utilización de un balde para contener el liquido entrante.",
+        response: "Trajes de gala para trabajos submarinos han sido enviados.",
       },
       {
         name: "Enviar los trajes a la tintorería",

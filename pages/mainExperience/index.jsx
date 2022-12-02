@@ -40,7 +40,8 @@ export default function MainExperience() {
   // Temporizador legible de la experiencia\
 
   useEffect(() => {
-    setInterval(() => {
+    // Actualizar la experiencia cada minuto
+    let experienceTimeInterval = setInterval(() => {
       updateCounter();
     }, 1000);
     window.onbeforeunload = function () {
@@ -49,6 +50,9 @@ export default function MainExperience() {
     sendDataToAPI({
       page: "MainExperience"
     })
+    return () => {
+      clearInterval(experienceTimeInterval)
+    }
   }, []);
 
   useEffect(() => {
@@ -65,6 +69,9 @@ export default function MainExperience() {
       }
     }
     window.addEventListener("keyup", handleKeyMain);
+    return () => {
+      window.removeEventListener("keyup", handleKeyMain);
+    }
   }, []);
 
   return (
