@@ -44,6 +44,7 @@ export default function MainExperience() {
     let experienceTimeInterval = setInterval(() => {
       updateCounter();
     }, 1000);
+    // Alerta para prevenir que el usuario cierre la pestaña del navegador
     window.onbeforeunload = function () {
       return "Prevenir refrescar la página";
     };
@@ -52,11 +53,13 @@ export default function MainExperience() {
     })
     return () => {
       clearInterval(experienceTimeInterval)
+      window.onbeforeunload = null; // Quitar la alerta de cerrar la pestaña del navegador
       console.log("Timer interval cleared")
     }
   }, []);
 
   useEffect(() => {
+    // Manejo de cambio de estaciones
     function handleKeyMain(e) {
       const key = e.key;
       if (key == keystrokes.stationArtic) {
