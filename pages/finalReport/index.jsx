@@ -29,6 +29,7 @@ export default function FinalReport() {
     },
   };
   // Tuve que hacer eso porque no puedo poner un for loop en el html :I
+  // Son los indicadores de tiempo en el eje X en intervalos de 1 minuto
   let minutesAmount = [];
   for (let i = 0; i <= durationMinutes; i++) {
     minutesAmount.push(<span key={i}>{i}m</span>);
@@ -39,7 +40,7 @@ export default function FinalReport() {
       const key = e.key;
       if (key == keystrokes.button0) {
         window.removeEventListener("keyup", handleKeyFinish);
-        Router.push("/trivia"); // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
+        Router.push("/trivia"); 
       }
     }
     window.addEventListener("keyup", handleKeyFinish);
