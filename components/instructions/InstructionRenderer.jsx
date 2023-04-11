@@ -43,7 +43,7 @@ export default function InstructionRenderer({
           Router.push(`./page${pages.next}`);
         }
       }
-      if (key == keystrokesValues.button1) {
+      if (key == keystrokesValues.button1 && quitResponse) {
         quitResponse.current.innerText = "El humor es siempre permitido dentro de límites razonables. ¡Feliz día Operador!"
       }
       if (key == keystrokesValues.button2) {

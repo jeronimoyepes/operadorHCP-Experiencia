@@ -3,7 +3,6 @@ import keystrokes from "@/helpers/keystrokesValues";
 import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./triviaStyle.module.scss";
 
-
 // JSON con las preguntas y sus respuestas
 import { questions } from "../../helpers/questionsData";
 import { UserContext } from "pages/_app";
@@ -36,10 +35,6 @@ export default function Trivia() {
   useEffect(() => {
     function handleKeyAnswers(e) {
       const key = e.key;
-      // Debe ser  - 2 porque se inicializa el estado con la primera pregunta y es base 0
-      if (currentQuestion > questions.length - 2) {
-        window.location.assign("/");
-      }
       if (key == keystrokes.button0) {
         checkCorrectAswer(0);
       }
@@ -48,6 +43,12 @@ export default function Trivia() {
       }
       if (key == keystrokes.button2) {
         checkCorrectAswer(2);
+      }
+      // Debe ser -2 porque se inicializa el estado con la primera pregunta y es base 0
+      if (currentQuestion > questions.length - 2) {
+        setTimeout(()=> {
+          window.location.assign("/"); // Se usa window.location para refrescar la página y así reinicar UserState que contiene el userHash
+        }, 1000)
       }
       // Esto es para evitar que se pase de pregunta si se presiona otra tecla diferente a la de los botones
       if (
@@ -65,8 +66,8 @@ export default function Trivia() {
 
         // Esperar un segundo para avanzar a siguiente pregunta y quitar el color de feedback de respuesta
         setTimeout(() => {
-          questionTitle.current.style.backgroundColor = "initial";
           setCurrentQuestion((prevState) => prevState + 1);
+          questionTitle.current.style.backgroundColor = "initial";
         }, 1000);
         window.removeEventListener("keyup", handleKeyAnswers);
       }

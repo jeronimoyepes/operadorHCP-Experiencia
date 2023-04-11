@@ -20,12 +20,17 @@ export default function SateliteConection() {
   };
 
   useEffect(() => {
-    setInterval(() => {
+    // La duración del timeout depende de la duración de la imagen GIF
+    const initiateExperience = setTimeout(() => {
       Router.push("/mainExperience");
     }, 8000);
     sendDataToAPI({
       page: "sateliteConection",
     });
+    return () => {
+      clearInterval(initiateExperience);
+      console.log("Initiate Experience");
+    };
   }, []);
 
   return (

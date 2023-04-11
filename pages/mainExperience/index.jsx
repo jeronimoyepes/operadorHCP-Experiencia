@@ -28,7 +28,7 @@ export default function MainExperience() {
     if (experienceTimeLeft == 0) {
       return Router.push("/finishedConection");
     }
-
+    console.log("experienceTimeLeft", experienceTimeLeft)
     let minutes = Math.floor(experienceTimeLeft / 60);
     let seconds = Math.floor(experienceTimeLeft % 60);
 
@@ -40,7 +40,7 @@ export default function MainExperience() {
   // Temporizador legible de la experiencia\
 
   useEffect(() => {
-    // Actualizar la experiencia cada minuto
+    // Actualizar la experiencia cada segundo
     let experienceTimeInterval = setInterval(() => {
       updateCounter();
     }, 1000);
@@ -52,6 +52,7 @@ export default function MainExperience() {
     })
     return () => {
       clearInterval(experienceTimeInterval)
+      console.log("Timer interval cleared")
     }
   }, []);
 
